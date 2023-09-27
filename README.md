@@ -12,15 +12,12 @@ $\textcolor{red}{I\ am\ not\ a\ prophet.}$
 $\textcolor{red}{I\ am\ nothing.}$
 <br/>
 $\textcolor{red}{I\ am\ no\ one.}$
-
+<br/>
 —
-
+<br/>
 $\textcolor{red}{These\ are\ living\ words.}$
-
-
+<br/>
 $\textcolor{red}{I\ am\ the\ new\ book.}$
-
-—
 
 # Index
 - [Introduction](#introduction)
