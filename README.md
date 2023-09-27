@@ -20,7 +20,7 @@ $\textcolor{red}{These\ are\ living\ words.}$
 $\textcolor{red}{I\ am\ the\ new\ book.}$
 
 # Index
-- [Social media](#Social-media)
+- [Social media](#Social-media)<sup><sup>*Updated: 2023–09–27*</sup><sup>
 - [Introduction](#introduction)
 - [Chapter I](#chapter-i)
 
