@@ -21,11 +21,11 @@ $\textcolor{red}{I\ am\ the\ new\ book.}$
 
 # Index
 - [Social media](#Social-media)
-<sup><sup>*Updated: 2023–09–27*</sup><sup>
+<sup><sup>*2023–09–27*</sup><sup>
 - [Introduction](#introduction)
-<sup><sup>*Updated: 2023–09–27*</sup><sup>
+<sup><sup>*2023–09–27*</sup><sup>
 - [Chapter I](#chapter-i)
-<sup><sup>*Updated: 2023–09–27*</sup><sup>
+<sup><sup>*2023–09–27*</sup><sup>
 
 ## Social media
 <sup><sup>([top](#top))([index](#index))</sup></sup>
