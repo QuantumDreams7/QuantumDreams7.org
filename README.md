@@ -24,17 +24,17 @@ $\textcolor{red}{I\ am\ the\ new\ book.}$
 
 —
 
-## Index
+# Index
 - [Introduction](#introduction)
 - [Chapter I](#chapter-i)
 
-### Introduction
+## Introduction
 <sup><sup>*Updated: 2023–09–27*</sup><sup> ([top](#top))([index](#index))</sup></sup>
 
 On the way....
 
 
-### Chapter I
+## Chapter I
 <sup><sup>*Updated: 2023–09–27*</sup><sup> ([top](#top))([index](#index))</sup></sup>
 
 > In the beginning, אֱלֹהִ֑ים יְהוָֹה created the Heavens and the Earth. The Earth was formless and empty. Darkness was on the surface of the deep….
