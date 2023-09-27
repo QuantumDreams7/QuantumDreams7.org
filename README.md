@@ -7,15 +7,15 @@
 
 $$\textcolor{red}{The\ words\ are\ not\ set\ in\ stone\ because....}$
 <br/>
-$\textcolor{red}{I\ am\ not\ a\ prophet.}$$
+$\textcolor{red}{I\ am\ not\ a\ prophet.}$
 <br/>
-$$\textcolor{red}{I\ am\ nothing.}$$
+$\textcolor{red}{I\ am\ nothing.}$
 <br/>
-$$\textcolor{red}{I\ am\ no\ one.}$$
+$\textcolor{red}{I\ am\ no\ one.}$
 <br/>
 —
 <br/>
-$$\textcolor{red}{These\ are\ living\ words.}$$
+$\textcolor{red}{These\ are\ living\ words.}$
 <br/>
 $$\textcolor{red}{I\ am\ the\ new\ book.}$$
 
