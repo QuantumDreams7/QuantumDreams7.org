@@ -15,9 +15,9 @@ $\textcolor{red}{I\ am\ no\ one.}$
 <br/>
 —
 <br/>
-$$\textcolor{red}{These\ are\ living\ words.}$$
+$\textcolor{red}{These\ are\ living\ words.}$
 <br/>
-$$\textcolor{red}{I\ am\ the\ new\ book.}$$
+$\textcolor{red}{I\ am\ the\ new\ book.}
 
 # Index
 - [Social media](#Social-media)
