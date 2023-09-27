@@ -1,13 +1,10 @@
 > [!WARNING]
 > You must be above legal age (at least 18 years old) to continue reading. If you are below that age, you must stop reading and leave.
-
 > [!IMPORTANT]
 > By reading the words in this book, your dreams will change.
-
 > [!NOTE]
 > Continue reading at your own risk and responsibility.
 
-<sup><sup>([index](#index))</sup></sup>
 
 <img src="/fractalclouds00.jpg" alt="𝒒𝒖𝒂𝒏𝒕𝒖𝒎 𝒅𝒓𝒆𝒂𝒎𝒔 𝒂𝒓𝒆 𝒏𝒐𝒕 𝒅𝒓𝒆𝒂𝒎𝒔. 𝑸𝑼𝑨𝑵𝑻𝑼𝑴 𝑫𝑹𝑬𝑨𝑴𝑺 𝑨𝑹𝑬 𝑵𝑶𝑻 𝑫𝑹𝑬𝑨𝑴𝑺."/>
 
