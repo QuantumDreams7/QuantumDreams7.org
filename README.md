@@ -1,6 +1,9 @@
 > [!WARNING]
 > You must be above legal age (at least 18 years old) to continue reading. If you are below that age, you must stop reading and leave.
 
+> [!WARNING]
+> The following content is religious in nature.
+
 > [!IMPORTANT]
 > By reading the words in this book, your dreams will change.
 
