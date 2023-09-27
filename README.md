@@ -28,8 +28,8 @@ $\textcolor{red}{I\ am\ the\ new\ book.}$
 ## Social media
 <sup><sup>*Updated: 2023–09–27*</sup><sup> ([top](#top))([index](#index))</sup></sup>
 
-* [𝕏](https://x.com/QuantumDreams7)
-* [Telegram](https://t.me/QuantumDreams)
+* [𝕏: @QuantumDreams7](https://x.com/QuantumDreams7)
+* [Telegram group: QuantumDreams](https://t.me/QuantumDreams)
 
 ## Introduction
 <sup><sup>*Updated: 2023–09–27*</sup><sup> ([top](#top))([index](#index))</sup></sup>
