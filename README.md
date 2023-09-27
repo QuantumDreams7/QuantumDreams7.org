@@ -45,4 +45,4 @@ On the way....
 
 —
 
-....so everything and everyone came to be by the words of Yahweh, blessed be His holy name.
+....and so everything and everyone came to be by the words of Yahweh, blessed be His holy name.
