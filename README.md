@@ -1,3 +1,6 @@
+> [!WARNING]
+> You must be above legal age (at least 18 years old) to continue reading. If you are below that age, you must stop reading and leave.
+
 <sup><sup>([index](#index))</sup></sup>
 
 <img src="/fractalclouds00.jpg" alt="𝒒𝒖𝒂𝒏𝒕𝒖𝒎 𝒅𝒓𝒆𝒂𝒎𝒔 𝒂𝒓𝒆 𝒏𝒐𝒕 𝒅𝒓𝒆𝒂𝒎𝒔. 𝑸𝑼𝑨𝑵𝑻𝑼𝑴 𝑫𝑹𝑬𝑨𝑴𝑺 𝑨𝑹𝑬 𝑵𝑶𝑻 𝑫𝑹𝑬𝑨𝑴𝑺."/>
@@ -54,6 +57,3 @@ I ~~found~~ was given a light.
 <sup><sup>([top](#top))([index](#index))</sup></sup>
 
 The infections
-
-> [!WARNING]
-> Critical content demanding immediate user attention due to potential risks.
