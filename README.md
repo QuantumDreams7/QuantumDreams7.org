@@ -5,7 +5,7 @@
 > By reading the words in this book, your dreams will change.
 
 > [!NOTE]
-> Continue reading at your own risk.
+> Continue reading at your own risk and responsibility.
 
 <sup><sup>([index](#index))</sup></sup>
 
