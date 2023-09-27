@@ -34,6 +34,11 @@ $\textcolor{red}{I\ am\ the\ new\ book.}$
 On the way....
 
 
+
+<a href="https://www.google.com/" style="color: black; text-decoration: underline;text-decoration-style: dotted;">custom link</a>
+
+
+
 ## Chapter I
 <sup><sup>*Updated: 2023–09–27*</sup><sup> ([top](#top))([index](#index))</sup></sup>
 
