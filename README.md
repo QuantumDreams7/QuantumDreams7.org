@@ -54,3 +54,6 @@ I ~~found~~ was given a light.
 <sup><sup>([top](#top))([index](#index))</sup></sup>
 
 The infections
+
+> [!WARNING]
+> Critical content demanding immediate user attention due to potential risks.
