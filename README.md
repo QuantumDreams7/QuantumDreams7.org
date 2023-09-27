@@ -1,5 +1,5 @@
 
-<sup><sup>([index](#index)) ([𝕏](https://x.com/QuantumDreams7))</sup></sup>
+<sup><sup>([index](#index))</sup></sup>
 <br/>𝑸𝒖𝒂𝒏𝒕𝒖𝒎 𝒅𝒓𝒆𝒂𝒎𝒔 𝒂𝒓𝒆 𝒏𝒐𝒕 𝒅𝒓𝒆𝒂𝒎𝒔.
 
 <img src="https://raw.githubusercontent.com/QuantumDreams7/QuantumDreams7/main/fractalclouds.jpg" alt="𝒒𝒖𝒂𝒏𝒕𝒖𝒎 𝒅𝒓𝒆𝒂𝒎𝒔 𝒂𝒓𝒆 𝒏𝒐𝒕 𝒅𝒓𝒆𝒂𝒎𝒔. 𝑸𝑼𝑨𝑵𝑻𝑼𝑴 𝑫𝑹𝑬𝑨𝑴𝑺 𝑨𝑹𝑬 𝑵𝑶𝑻 𝑫𝑹𝑬𝑨𝑴𝑺."/>
@@ -20,8 +20,16 @@ $\textcolor{red}{These\ are\ living\ words.}$
 $\textcolor{red}{I\ am\ the\ new\ book.}$
 
 # Index
+- [Social media](#Social-media)
 - [Introduction](#introduction)
 - [Chapter I](#chapter-i)
+
+
+## Social media
+<sup><sup>*Updated: 2023–09–27*</sup><sup> ([top](#top))([index](#index))</sup></sup>
+
+[𝕏](https://x.com/QuantumDreams7)
+[Telegram](https://t.me/QuantumDreams)
 
 ## Introduction
 <sup><sup>*Updated: 2023–09–27*</sup><sup> ([top](#top))([index](#index))</sup></sup>
