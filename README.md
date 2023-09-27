@@ -32,7 +32,7 @@ $\textcolor{red}{I\ am\ the\ new\ book.}$
 <sup><sup>([top](#top))([index](#index))</sup></sup>
 
 * [𝕏: @QuantumDreams7](https://x.com/QuantumDreams7)
-* [Telegram group: QuantumDreams](https://t.me/QuantumDreams)
+<!--* [Telegram group: QuantumDreams](https://t.me/QuantumDreams)-->
 
 ## Introduction
 <sup><sup>([top](#top))([index](#index))</sup></sup>
