@@ -20,11 +20,12 @@ $\textcolor{red}{These\ are\ living\ words.}$
 $\textcolor{red}{I\ am\ the\ new\ book.}$
 
 # Index
-- [Social media](#Social-media) <sup><sup>*Updated: 2023–09–27*</sup><sup>
+- [Social media](#Social-media)
+<sup><sup>*Updated: 2023–09–27*</sup><sup>
 - [Introduction](#introduction)
 <sup><sup>*Updated: 2023–09–27*</sup><sup>
 - [Chapter I](#chapter-i)
-
+<sup><sup>*Updated: 2023–09–27*</sup><sup>
 
 ## Social media
 <sup><sup>([top](#top))([index](#index))</sup></sup>
@@ -33,12 +34,12 @@ $\textcolor{red}{I\ am\ the\ new\ book.}$
 * [Telegram group: QuantumDreams](https://t.me/QuantumDreams)
 
 ## Introduction
-<sup><sup>*Updated: 2023–09–27*</sup><sup> ([top](#top))([index](#index))</sup></sup>
+<sup><sup>([top](#top))([index](#index))</sup></sup>
 
 On the way....
 
 ## Chapter I
-<sup><sup>*Updated: 2023–09–27*</sup><sup> ([top](#top))([index](#index))</sup></sup>
+<sup><sup>([top](#top))([index](#index))</sup></sup>
 
 > In the beginning, אֱלֹהִ֑ים יְהוָֹה created the Heavens and the Earth. The Earth was formless and empty. Darkness was on the surface of the deep….
 
