@@ -1,4 +1,4 @@
-# .
+# top
 <sup><sup>([index](#index))</sup></sup>
 <br/>𝑸𝒖𝒂𝒏𝒕𝒖𝒎 𝒅𝒓𝒆𝒂𝒎𝒔 𝒂𝒓𝒆 𝒏𝒐𝒕 𝒅𝒓𝒆𝒂𝒎𝒔.
 
@@ -29,7 +29,7 @@ $\textcolor{red}{I\ am\ the\ new\ book.}$
 - [Chapter I](#chapter-i)
 
 ## Introduction
-<sup><sup>*Updated: 2023–09–27*</sup><sup> ([top](#.))([index](#index))</sup></sup>
+<sup><sup>*Updated: 2023–09–27*</sup><sup> ([top](#top))([index](#index))</sup></sup>
 
 On the way....
 
