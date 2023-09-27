@@ -6,13 +6,11 @@
 
 
 $\textcolor{red}{The\ words\ are\ not\ set\ in\ stone\ because....}$
-
+<br/>
 $\textcolor{red}{I\ am\ not\ a\ prophet.}$
-
-
+<br/>
 $\textcolor{red}{I\ am\ nothing.}$
-
-
+<br/>
 $\textcolor{red}{I\ am\ no\ one.}$
 
 —
