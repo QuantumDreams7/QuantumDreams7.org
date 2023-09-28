@@ -18,15 +18,6 @@
 
 
 
-.page {
-  width: 100%;
-  height: 100vh;
-  background: #fdfdfd;
-  font-family: 'Encode Sans Condensed', sans-serif;
-  font-weight: 600;
-  letter-spacing: .03em;
-  color: #212121;
-}
 
 header {
   display: flex;
@@ -38,6 +29,7 @@ header {
   justify-content: center;
   align-items: center;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+    z-index:666;
 }
 
 main {
@@ -72,6 +64,8 @@ main small {
   height: 100vh;
   width: 100%;
   pointer-events: none;
+z-index:666;
+
 }
 #nav-container .bg {
   position: absolute;
@@ -418,8 +412,20 @@ img {
     </div>
   </div>
 
-  <main>
-    <div class="content">
+  </div>
+  
+
+
+	  
+  
+
+  
+
+
+
+
+<main>
+    <div class="chontent">
       <h2>Off-screen navigation using <span>:focus-within</span></h2>
       <p>Adding yet another pure CSS technique to the list of off-screen navigation by "hacking" the :focus-within pseudo-class. Have a look at the code to see how it works.</p>
       <small><strong>NB!</strong> Use a browser that supports :focus-within</small>
@@ -588,15 +594,4 @@ If you do not believe in God, you will most probably not find this content of in
 
 
 	    
-    </div>
-  </main>
-</div>
-
-	  
-  
-
-  
-
-
-
-</body></html>
+    </main></body></html>
