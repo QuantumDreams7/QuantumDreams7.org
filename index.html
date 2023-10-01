@@ -228,22 +228,23 @@ z-index:666;
 }
 
 .button {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  z-index: 1;
-  -webkit-appearance: none;
-  border: 0;
-  background: transparent;
-  border-radius: 0;
-  height: 199px;
-  width: 30px;
-  cursor: pointer;
-  pointer-events: auto;
-  margin-left: 19px;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 999;
+    -webkit-appearance: none;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    height: 39px;
+    width: 30px;
+    cursor: pointer;
+    pointer-events: auto;
+    left: 13px;
+    top: 88px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 .icon-bar {
   display: block;
@@ -271,7 +272,7 @@ z-index:666;
 
 #nav-content {
   margin-top: 129px;
-  padding: 9px;
+  padding: 17px;
   width: 100%;
   /* max-width: 300px; */
   position: absolute;
@@ -295,7 +296,8 @@ background-image: linear-gradient(to right, #440900 , #220000, black);
 }
 
 #nav-content li a {
-  padding: 10px 5px;
+  padding-left: 2px;
+padding-top:4px;
   display: block;
   text-transform: uppercase;
   transition: color .1s;
