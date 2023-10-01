@@ -1,528 +1,44 @@
 <!DOCTYPE html>
 
 <html lang="en-US">
-
-<head>
 	
-<link rel="mask-icon" href="./favicon.svg" color="#000000">
-  <link rel="alternate icon" class="js-site-favicon" type="image/png" href="./favicon.png">
-  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="./favicon.svg">
-<meta name="color-scheme" content="light only">
-	  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<style class="anchorjs"></style><link rel="stylesheet" href="./style.css">
-		<title>
+	<head>
+		<link rel="mask-icon" href="./favicon.svg" color="#000000">
+		<link rel="alternate icon" class="js-site-favicon" type="image/png" href="./favicon.png">
+		<link rel="icon" class="js-site-favicon" type="image/svg+xml" href="./favicon.svg">
+		
+		<meta name="color-scheme" content="light only">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./quantumdreams7.css">
 
-			QuantumDreams7
-
-		</title>
-
-		<style>
-
-:root {
-     color-scheme: light only;
-}
-
-/* newsreader-200 - latin_latin-ext */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 200;
-  src: url('./fonts/newsreader-v20-latin_latin-ext-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* newsreader-200italic - latin_latin-ext */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Newsreader';
-  font-style: italic;
-  font-weight: 200;
-  src: url('./fonts/newsreader-v20-latin_latin-ext-200italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* newsreader-300 - latin_latin-ext */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 300;
-  src: url('./fonts/newsreader-v20-latin_latin-ext-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* newsreader-300italic - latin_latin-ext */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Newsreader';
-  font-style: italic;
-  font-weight: 300;
-  src: url('./fonts/newsreader-v20-latin_latin-ext-300italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* newsreader-regular - latin_latin-ext */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 400;
-  src: url('./fonts/newsreader-v20-latin_latin-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* newsreader-italic - latin_latin-ext */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Newsreader';
-  font-style: italic;
-  font-weight: 400;
-  src: url('./fonts/newsreader-v20-latin_latin-ext-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* newsreader-500 - latin_latin-ext */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 500;
-  src: url('./fonts/newsreader-v20-latin_latin-ext-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* newsreader-500italic - latin_latin-ext */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Newsreader';
-  font-style: italic;
-  font-weight: 500;
-  src: url('./fonts/newsreader-v20-latin_latin-ext-500italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* newsreader-600 - latin_latin-ext */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 600;
-  src: url('./fonts/newsreader-v20-latin_latin-ext-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* newsreader-600italic - latin_latin-ext */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Newsreader';
-  font-style: italic;
-  font-weight: 600;
-  src: url('./fonts/newsreader-v20-latin_latin-ext-600italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* newsreader-700 - latin_latin-ext */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 700;
-  src: url('./fonts/newsreader-v20-latin_latin-ext-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* newsreader-700italic - latin_latin-ext */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Newsreader';
-  font-style: italic;
-  font-weight: 700;
-  src: url('./fonts/newsreader-v20-latin_latin-ext-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* newsreader-800 - latin_latin-ext */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Newsreader';
-  font-style: normal;
-  font-weight: 800;
-  src: url('./fonts/newsreader-v20-latin_latin-ext-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* newsreader-800italic - latin_latin-ext */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Newsreader';
-  font-style: italic;
-  font-weight: 800;
-  src: url('./fonts/newsreader-v20-latin_latin-ext-800italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-.profile {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    overflow: hidden;
-    /* position: fixed; */
- /* z-index:999; */
-    border: 1px solid #440000;
-box-shadow: 0px 0px 19px 0px #ff0000;
-}
-.profile img{
-  width:100%;
-height: 100%;
-object-fit: cover;
-}
-.toplogo {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-}
-header {
-/* background-image: url('./fractalclouds.jpg'); */
-background-position: left 0px top 0px;
-background-size: cover;
-background-repeat: no-repeat;
-  display: flex;
-  position: fixed;
-  width: 100%;
-  height: 129px;
-  color: #e0b899;
-  justify-content: center;
-  align-items: center;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-    z-index:666;
-}
-
-main {
-  padding: 0px 9px 9px 9px;
-  flex-direction: column;
-  height: 100%;
-width: 100%;
-}
-
-main > div {
-  margin: auto;
-}
-
-main h2 span {
-  color: #BF7497;
-}
-
-main p {
-  line-height: 1.5;
-  margin: 20px 0;
-}
-
-main small {
-  font-weight: 300;
-}
-
-#nav-container {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  pointer-events: none;
-z-index:666;
-
-}
-#nav-container .bg {
-  position: absolute;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  opacity: 0;
-  transition: .3s;
-  background: #000;
-}
-#nav-container:focus-within .bg {
-  visibility: visible;
-  opacity: .6;
-}
-#nav-container * {
-  visibility: visible;
-}
-
-.button {
-  position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 999;
-    -webkit-appearance: none;
-    border: 0;
-    background: transparent;
-    border-radius: 0;
-    height: 39px;
-    width: 30px;
-    cursor: pointer;
-    pointer-events: auto;
-    left: 13px;
-    top: 88px;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-.icon-bar {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background: #e0b899;
-  transition: .3s;
-}
-.icon-bar + .icon-bar {
-  margin-top: 5px;
-}
-
-#nav-container:focus-within .button {
-  pointer-events: none;
-}
-#nav-container:focus-within .icon-bar:nth-of-type(1) {
-  transform: translate3d(0,8px,0) rotate(45deg);
-}
-#nav-container:focus-within .icon-bar:nth-of-type(2) {
-  opacity: 0;
-}
-#nav-container:focus-within .icon-bar:nth-of-type(3) {
-  transform: translate3d(0,-8px,0) rotate(-45deg);
-}
-
-#nav-content {
-  margin-top: 129px;
-  padding: 17px;
-  width: 100%;
-  /* max-width: 300px; */
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: #000000;
-background-image: linear-gradient(to right, #440900 , #220000, black);
-  pointer-events: auto;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  transform: translateX(-100%);
-  transition: transform .3s;
-  will-change: transform;
-  contain: paint;
-}
-
-#nav-content ul {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-#nav-content li a {
-  padding-left: 2px;
-padding-top:9px;
-  display: block;
-  text-transform: uppercase;
-  transition: color .1s;
-}
-
-#nav-content li a:hover {
-  color: #BF7497;
-}
-
-#nav-content li:not(.small) + .small {
-  margin-top: auto;
-}
-
-.small {
-  display: flex;
-  align-self: center;
-}
-
-.small a {
-  font-size: 12px;
-  font-weight: 400;
-}
-.small a + a {
-  margin-left: 15px;
-}
-
-#nav-container:focus-within #nav-content {
-  transform: none;
-}
-
-
-
-
-
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-}
-
-a,
-a:visited,
-a:focus,
-a:active,
-a:link {
-  text-decoration: none;
-  outline: 0;
-}
-
-a {
-  color: currentColor;
-  transition: .2s ease-in-out;
-}
-
-h1, h2, h3, h4 {
-  margin: 0;
-}
-
-ul {
-  padding: 0;
-  list-style: none;
-}
-
-img {
-  vertical-align: middle;
-  height: auto;
-  width: 100%;
-}
-			
-.d-inline-flex {
-    display: inline-flex !important;
-}
-
-.mb-1 {
-    margin-bottom: 4px !important;
-}
-.flex-items-center {
-    align-items: center !important;
-}
-.d-inline-flex {
-    display: inline-flex !important;
-}
-.text-semibold {
-    font-weight: var(--base-text-weight-medium, 500) !important;
-}
-.mb-1 {
-    margin-bottom: var(--base-size-4, 4px) !important;
-}
-.flex-items-center {
-    align-items: center !important;
-}
-.color-fg-attention {
-    color: #ff0000;
-}
-.color-fg-accent {
-    
-}
-.color-fg-done {
-    color: #ffa500;
-}			
-    
-.mr-2 {
-    margin-right: 8px !important;
-}
-
-.octicon {
-    vertical-align: text-bottom;
-}
-.mr-2 {
-    margin-right: var(--base-size-8, 8px) !important;
-}
-.octicon {
-    display: inline-block;
-    overflow: visible !important;
-    vertical-align: text-bottom;
-    fill: currentColor;
-} 
-.markdown-alert.markdown-alert-warning {
-        border-left: 0.29em solid #991111;
-}
-.markdown-alert.markdown-alert-important {
-        border-left: 0.29em solid #663807;
-			}
-.markdown-alert.markdown-alert-note {
-        border-left: 0.29em solid #584838;
-}
-.markdown-alert.markdown-alert-quote {
-        border-left: 0.29em solid #483838;
-	color: #887777;
-}
-
-
-.markdown-body>*:first-child {
-    margin-top: 0 !important;
-}
-.markdown-alert {
-    padding: 0 1em;
-    margin-bottom: 16px;
-}
-
-.hiddentag {
-	height:144px;
-	width:0px;
-	overflow:hidden;
-}
-.divh1 {
-	height: 38px;
-	padding-top: 2px;
-	padding-left: 4px;
-	margin-top: -5px;
-	background-image: linear-gradient(to right, #440900 , #220000, #1E1E1E);
-}
-.divh2 {
-	height: 38px;
-	padding-top: 10px;
-	padding-left: 4px;
-	margin-top: -5px;
-	background-image: linear-gradient(to right, #440900 , #220000, #1E1E1E);
-}
-			body {
-
-				font-family: "Newsreader", "serif";
-				font-weight: normal;
-
-				color: #d3b8aa;
-
-				background-color: #1E1E1E;
-
-				background-image: url("");
-
-				background-repeat:no-repeat;
-
-				background-size: cover;
-
-			}
-
-			.link {
-
-				color: #000000;
-
-				text-decoration: none;
-
-			}
-
-			.link:hover, .link:visited, .link:active {
-
-				color: #bb9900;
-
-				text-decoration: underline;
-
-			}
-
-		</style>
-
-	
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>QuantumDreams7</title>
-
+	<title>
+		QuantumDreams7
+	</title>
 </head>
-
 
 <body>
 
-	
-<div class="page">
+
+
+
 	<header>
-		<img src="fractalcloudsheader.jpg" class="toplogo">
+		<img src="fractalcloudsheader.jpg" class="fractalcloudsheader">
 	</header>
 	<div id="nav-container">
 		<div class="bg"></div>
 		<div class="button" tabindex="0">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</div>
-		<div id="nav-content" tabindex="0">
-			<ul>
-				<li>
-					<div class="profile">
-						<img src="./quantumdreams7profile.jpg">
-					</div>
-					<br/>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</div>
+			<div id="nav-content" tabindex="0">
+				<ul>
+					<li>
+						<div class="profile">
+							<img src="./quantumdreams7profile.jpg">
+						</div>
+						<br/>
 				</li>
 				<li>
 					<a href="./">
@@ -537,192 +53,210 @@ img {
 				<li>
 					<a href="./">
 						𝑻𝒉𝒆 𝒘𝒐𝒓𝒅𝒔 𝒂𝒓𝒆 𝒏𝒐𝒕 𝒔𝒆𝒕 𝒊𝒏 𝒔𝒕𝒐𝒏𝒆 𝒃𝒆𝒄𝒂𝒖𝒔𝒆....
-	<br/>
-	𝑰 𝒂𝒎 𝒏𝒐𝒕 𝒂 𝒑𝒓𝒐𝒑𝒉𝒆𝒕.
-	<br/>
-	𝑰 𝒂𝒎 𝒏𝒐𝒕𝒉𝒊𝒏𝒈.
-	<br/>
-	𝑰 𝒂𝒎 𝒏𝒐 𝒐𝒏𝒆.
-	<br/>
-	—
-	<br/>
-	𝑻𝒉𝒆𝒔𝒆 𝒂𝒓𝒆 𝒍𝒊𝒗𝒊𝒏𝒈 𝒘𝒐𝒓𝒅𝒔.
-	<br/>
-	𝑰 𝒂𝒎 𝒕𝒉𝒆 𝒏𝒆𝒘 𝒃𝒐𝒐𝒌.
+						<br/>
+						𝑰 𝒂𝒎 𝒏𝒐𝒕 𝒂 𝒑𝒓𝒐𝒑𝒉𝒆𝒕.
+						<br/>
+						𝑰 𝒂𝒎 𝒏𝒐𝒕𝒉𝒊𝒏𝒈.
+						<br/>
+						𝑰 𝒂𝒎 𝒏𝒐 𝒐𝒏𝒆.
+						<br/>
+						—
+						<br/>
+						𝑻𝒉𝒆𝒔𝒆 𝒂𝒓𝒆 𝒍𝒊𝒗𝒊𝒏𝒈 𝒘𝒐𝒓𝒅𝒔.
+						<br/>
+						𝑰 𝒂𝒎 𝒕𝒉𝒆 𝒏𝒆𝒘 𝒃𝒐𝒐𝒌.
 					</a>
 				</li>
-				<!--<li class="small"><a href="#0">Facebook</a><a href="#0">Instagram</a></li>-->
 			</ul>
 		</div>
 	</div>
-</div>
 
-	
+
+
+
 <main>
 <div class="content">
-	
-<div class="hiddentag"><a name="index" id="index">index</a></div>
-<div class="divh1">
-	<h1>Index</h1>
+
+<div class="hiddentag">
+<a name="index" id="index">index</a>
 </div>
-<br/>
+<div class="divh1">
+<h1>Index</h1>
+</div>
+<br />
 <ul>
-	<li>
-	  <a href="#legal">Legal disclaimer</a>
-	  <sup><sup><em></em></sup><sup></sup></sup>
-	</li>
-	<li>
-		<a href="#socialmedia">Social media</a>
-		<sup><sup><em>2023–09–30</em></sup><sup></sup></sup>
-	</li>
-	<li>
-		<a href="#introduction">Introduction</a>
-		<sup><sup><em>2023–09–27</em></sup><sup></sup></sup>
-	</li>
-	<li>
-		<a href="#chapteri">Chapter I</a>
-		<sup><sup><em>2023–09–27</em></sup><sup></sup></sup>
-	</li>
-	<li>
-		<a href="#chapterii">Chapter II</a>
-		<sup><sup><em>2023–09–30</em></sup><sup></sup></sup>
-	</li>
+<li>
+<a href="#legal">Legal disclaimer</a>
+<sup><sup><em></em></sup><sup></sup></sup>
+</li>
+<li>
+<a href="#socialmedia">Social media</a>
+<sup><sup><em>2023–09–30</em></sup><sup></sup></sup>
+</li>
+<li>
+<a href="#introduction">Introduction</a>
+<sup><sup><em>2023–09–27</em></sup><sup></sup></sup>
+</li>
+<li>
+<a href="#chapteri">Chapter I</a>
+<sup><sup><em>2023–09–27</em></sup><sup></sup></sup>
+</li>
+<li>
+<a href="#chapterii">Chapter II</a>
+<sup><sup><em>2023–09–30</em></sup><sup></sup></sup>
+</li>
 </ul>
 
 
 
-<div class="hiddentag"><a name="legal" id="legal">legal</a></div>
-<div class="divh2">
-	<h2>Legal disclaimer <sup><sup>(<a href="#index">index</a>)</sup></sup></h2>
+<div class="hiddentag">
+<a name="legal" id="legal">legal</a>
 </div>
-<br/>
+<div class="divh2">
+<h2>Legal disclaimer <sup><sup>(<a href="#index">index</a>)</sup></sup></h2>
+</div>
+<br />
 
 <p>
 Obligatory to read information before you continue:
 <div class="markdown-alert markdown-alert-note" dir="auto">
-	<p dir="auto">
-		<span class="color-fg-accent text-semibold d-inline-flex flex-items-center mb-1">
-			<svg class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
-				<path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
-				</path>
-			</svg>
-		</span>
-		<br/>
-		© 2023 copyright, all rights reserved.
-	</p>
+<p dir="auto">
+<span class="color-fg-accent text-semibold d-inline-flex flex-items-center mb-1">
+<svg class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+<path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+</path>
+</svg>
+</span>
+<br />
+© 2023 copyright, all rights reserved.
+</p>
 </div>
 <div class="markdown-alert markdown-alert-warning" dir="auto">
-	<p dir="auto">
-		<span class="color-fg-attention text-semibold d-inline-flex flex-items-center mb-1">
-			<svg class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
-				<path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z">
-				</path>
-			</svg>
-			
-		</span>
-		<br/>
-		You must be above legal age (at least 18 years old) to continue reading. If you are below that age, you must stop reading and leave.
-	</p>
+<p dir="auto">
+<span class="color-fg-attention text-semibold d-inline-flex flex-items-center mb-1">
+<svg class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+<path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z">
+</path>
+</svg>
+
+</span>
+<br />
+You must be above legal age (at least 18 years old) to continue reading. If you are below that age, you must stop reading and leave.
+</p>
 </div>
 <div class="markdown-alert markdown-alert-warning" dir="auto">
-	<p dir="auto">
-		<span class="color-fg-attention text-semibold d-inline-flex flex-items-center mb-1">
-			<svg class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
-				<path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z">
-				</path>
-			</svg>
-			
-		</span>
-		<br/>
-		I (and this website) never have and / or never ever will be giving any kind of financial, medical, legal, political advice. I don't care about human affairs in politics, law, news, medical, economics etc., nothing in here is related to and / or advice on such subjects. The contents are personal opinion and / or art.
-	</p>
-</div>	
+<p dir="auto">
+<span class="color-fg-attention text-semibold d-inline-flex flex-items-center mb-1">
+<svg class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+<path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z">
+</path>
+</svg>
+
+</span>
+<br />
+I (and this website) never have and / or never ever will be giving any kind of financial, medical, legal, political advice. I don't care about human affairs in politics, law, news, medical, economics etc., nothing in here is related to and / or advice on such subjects. The contents are personal opinion and / or art.
+</p>
+</div>
 <div class="markdown-alert markdown-alert-important" dir="auto">
-	<p dir="auto">
-		<span class="color-fg-done text-semibold d-inline-flex flex-items-center mb-1">
-			<svg class="octicon octicon-report mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
-				<path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z">
-				</path>
-			</svg>
-		</span>
-		<br/>
-		The following content is religious in nature. If you do not believe in God, leave!
-	</p>
+<p dir="auto">
+<span class="color-fg-done text-semibold d-inline-flex flex-items-center mb-1">
+<svg class="octicon octicon-report mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+<path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z">
+</path>
+</svg>
+</span>
+<br />
+The following content is religious in nature. If you do not believe in God, leave!
+</p>
 </div>
 <div class="markdown-alert markdown-alert-note" dir="auto">
-	<p dir="auto">
-		<span class="color-fg-accent text-semibold d-inline-flex flex-items-center mb-1">
-			<svg class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
-				<path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
-				</path>
-			</svg>
-		</span>
-		<br/>
-		By reading the words in this book, your dreams will change into quantum dreams. It will result in true paranormal experiences that are not induced by mind altering drugs. Also, the way you look at reality and this realm, understanding time and language, relationship with your loved ones / friendships / family / relatives / coworkers etc., many other aspects of your life and your sanity ....might be affected. Think of it and continue reading at your own risk and responsibility.
-	</p>
+<p dir="auto">
+<span class="color-fg-accent text-semibold d-inline-flex flex-items-center mb-1">
+<svg class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+<path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z">
+</path>
+</svg>
+</span>
+<br />
+By reading the words in this book, your dreams will change into quantum dreams. It will result in true paranormal experiences that are not induced by mind altering drugs. Also, the way you look at reality and this realm, understanding time and language, relationship with your loved ones / friendships / family / relatives / coworkers etc., many other aspects of your life and your sanity ....might be affected. Think of it and continue reading at your own risk and responsibility.
+</p>
 </div>
 </p>
-	
-	
-<div class="hiddentag"><a name="socialmedia" id="socialmedia">socialmedia</a></div>
-<div class="divh2">
-	<h2>Social media <sup><sup>(<a href="#index">index</a>)</sup></sup></h2>
+
+
+<div class="hiddentag">
+<a name="socialmedia" id="socialmedia">socialmedia</a>
 </div>
-<br/>
+<div class="divh2">
+<h2>Social media <sup><sup>(<a href="#index">index</a>)</sup></sup></h2>
+</div>
+<br />
 
 <p>
 Don't get tricked and deceived by the deceivers, there are many imposters and many who copy/alter my words, beware that they give you poison when they alter and remove me from the words. Beside this website, I am not active anywhere else on the internet except the following places:
 <ul>
-	<li>
-		<a href="https://x.com/QuantumDreams7" target="_blank">𝕏: @QuantumDreams7</a>
-	</li>
-	<li>
-		<a href="https://t.me/QuantumDreams" target="_blank">Telegram: QuantumDreams</a>
-	</li>
+<li>
+<a href="https://x.com/QuantumDreams7" target="_blank">𝕏: @QuantumDreams7</a>
+</li>
+<li>
+<a href="https://t.me/QuantumDreams" target="_blank">Telegram: QuantumDreams</a>
+</li>
 </ul>
 </p>
 
-<div class="hiddentag"><a name="introduction" id="introduction">introduction</a></div>
-<div class="divh2">
-	<h2>Introduction <sup><sup>(<a href="#index">index</a>)</sup></sup></h2>
+<div class="hiddentag">
+<a name="introduction" id="introduction">introduction</a>
 </div>
-<br/>
+<div class="divh2">
+<h2>Introduction <sup><sup>(<a href="#index">index</a>)</sup></sup></h2>
+</div>
+<br />
 
 <p>
 I <del>found</del> was given a light.
 </p>
 
 
-<div class="hiddentag"><a name="chapteri" id="chapteri">chapteri</a></div>
-<div class="divh2">
-	<h2>Chapter I <sup><sup>(<a href="#index">index</a>)</sup></sup></h2>
+<div class="hiddentag">
+<a name="chapteri" id="chapteri">chapteri</a>
 </div>
-<br/>
+<div class="divh2">
+<h2>Chapter I <sup><sup>(<a href="#index">index</a>)</sup></sup></h2>
+</div>
+<br />
 
-<p>יְהוָֹה</p>
+<p>
+יְהוָֹה
+</p>
 <div class="markdown-alert markdown-alert-quote" dir="auto">
-	<p dir="auto">
-		In the beginning, אֱלֹהִ֑ים יְהוָֹה created the Heavens and the Earth. The Earth was formless and empty. Darkness was on the surface of the deep….
-	</p>
+<p dir="auto">
+In the beginning, אֱלֹהִ֑ים יְהוָֹה created the Heavens and the Earth. The Earth was formless and empty. Darkness was on the surface of the deep….
+</p>
 </div>
 <p>
-	....and so everything and everyone came to be by the words of Yahweh, blessed be His holy name.
+....and so everything and everyone came to be by the words of Yahweh, blessed be His holy name.
 </p>
 
 
-<div class="hiddentag"><a name="chapterii" id="chapterii">chapterii</a></div>
+<div class="hiddentag">
+<a name="chapterii" id="chapterii">chapterii</a>
+</div>
 <div class="divh2">
-	<h2>Chapter II <sup><sup>(<a href="#index">index</a>)</sup></sup></h2>
+<h2>Chapter II <sup><sup>(<a href="#index">index</a>)</sup></sup></h2>
 </div>
-<br/>
+<br />
 
-<p>The infections</p>
 <p>
-	They came from space. They have been here a long long time.
+The infections
+</p>
+<p>
+They came from space. They have been here a long long time.
 </p>
 
-	
-<div class="hiddentag"><a name="end" id="end">end</a></div>
+
+<div class="hiddentag">
+<a name="end" id="end">end</a>
+</div>
 </div>
 </main>
 
