@@ -26,7 +26,7 @@
 		fixbr
 		) {
 		let _datafileobject = await fetch(
-			"/data/"
+			"https://quantumdreams7.org/data/"
 			+
 			datafile
 			+
@@ -36,7 +36,7 @@
 		if (datafile==="_sectionx") {
 			
 			let _datafileobject2 = await fetch(
-			"/data/"
+			"https://quantumdreams7.org/data/"
 			+
 			datafile
 			+
@@ -70,7 +70,8 @@
 				);
 			
 			_datafiletext = 
-			_datafiletext.replace(					"sectionx",
+			_datafiletext.replace(
+				"sectionx",
 				datadestination
 				);
 			_datafiletext = 
