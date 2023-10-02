@@ -20,6 +20,8 @@
 				sectionx_text_title,
 				sectionxmenu_text_em,
 				sectionxmenu_text_sup,
+				recursive_datafile,
+				recursive_datadestination,
 				fixbr
 				) {
 
@@ -29,7 +31,7 @@
 					global: false,
 					type: 'POST',
 					data: {},
-            		async: false,
+            		async: true,
 					success : function(response) {
 					
 					if (datafile==="sectionx") {
@@ -39,7 +41,7 @@
 					global: false,
 					type: 'POST',
 					data: {},
-            		async: false,
+            		async: true,
 					success : function(response) {
 						
 					response = 
@@ -94,6 +96,19 @@
 					
 					$("#data_"+datadestination).html(response);
 					
+					if (recursive_datafile!==null) {
+						data_load(
+						recursive_datafile,
+						recursive_datadestination,
+						"",
+						"",
+						"",
+						"",
+						null,
+						"",
+						false
+					);
+					}
 						
 					}});
 			}
@@ -109,6 +124,8 @@
 						"Legal disclaimer",
 						"",
 						"",
+						"legal",
+						"legal",
 						false
 					);
 					data_load(
@@ -118,6 +135,8 @@
 						"Social media",
 						"2023–09–30",
 						"",
+						"socialmedia",
+						"socialmedia",
 						false
 					);
 					data_load(
@@ -127,6 +146,8 @@
 						"Introduction",
 						"2023-09-27",
 						"",
+						"introduction",
+						"introduction,",
 						false
 					);
 					data_load(
@@ -136,6 +157,8 @@
 						"Chapter I",
 						"2023-09-27",
 						"",
+						"chapteri",
+						"chapteri",
 						false
 					);
 					data_load(
@@ -145,9 +168,11 @@
 						"Chapter II",
 						"2023-09-30",
 						"",
+						"chapterii",
+						"chapterii",
 						false
 					);
-					data_load(
+					/*data_load(
 						"legal",
 						"legal",
 						"",
@@ -191,8 +216,8 @@
 						"",
 						"",
 						true
-						);
-					setTimeout(function(){$("#loading").remove();},999);
+						);*/
+					/*setTimeout(function(){$("#loading").remove();},999);*/
 				}
 			);
 		</script>
@@ -203,7 +228,7 @@
 
 <body>
 	
-<div id="loading" style="font-family:georgia,serif;padding:99px;color:#FF0000;background-color:#000000; vertical-align:middle;  position:fixed; top:0px; left:0px; width:100%; height:100%; z-index:9999;">
+<div id="loading" style="font-family:georgia,serif;padding:99px;color:#FF0000;background-color:#000000; vertical-align:middle;  position:fixed; top:0px; left:0px; width:10%; height:10%; z-index:9999;">
 	Please wait, loading....
 </div>
   
