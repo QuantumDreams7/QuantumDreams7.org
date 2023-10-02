@@ -2,101 +2,103 @@
 
 <html lang="en-US">
 	
-	<head>
-		<link rel="mask-icon" href="./favicon.svg" color="#000000">
-		<link rel="alternate icon" class="js-site-favicon" type="image/png" href="./favicon.png">
-		<link rel="icon" class="js-site-favicon" type="image/svg+xml" href="./favicon.svg">
-		<meta name="color-scheme" content="light only">
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="./quantumdreams7.css">
-		<script src="./script/jquery-3.7.1.min.js"></script>
-		<script src="./script/w3data.js"></script>
-		<script>
-			function data_load(
-				datafile,
-				datadestination,
-				sectionx_data_destination,
-				sectionx_text_title,
-				sectionxmenu_text_em,
-				sectionxmenu_text_sup,
-				recursive_datafile,
-				recursive_datadestination,
-				fixbr
-				) {
+<head>
+	
+<link rel="mask-icon" href="./ico/favicon.svg" color="#000000">
+<link rel="alternate icon" class="js-site-favicon" type="image/png" href="./ico/favicon.png">
+<link rel="icon" class="js-site-favicon" type="image/svg+xml" href="./ico/favicon.svg">
+<meta name="color-scheme" content="light only">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/quantumdreams7.css">
+<script src="./script/jquery-3.7.1.min.js"></script>
 
-				$.ajax({
-					
-					url: "./data/"+datafile+".html",
-					global: false,
-					type: 'POST',
-					data: {},
-            		async: true,
-					success : function(response) {
-					
-					if (datafile==="sectionx") {
+<script>
+	async function data_load(
+		datafile,
+		datadestination,
+		sectionx_data_destination,
+		sectionx_text_title,
+		sectionxmenu_text_em,
+		sectionxmenu_text_sup,
+		recursive_datafile,
+		recursive_datadestination,
+		fixbr
+		) {
+		let _datafileobject = await fetch(
+			"./data/text/"
+			+
+			datafile
+			+
+			".html"
+			);
+		let _datafiletext = await _datafileobject.text();
+		if (datafile==="_sectionx") {
+			
+			let _datafileobject2 = await fetch(
+			"./data/text/"
+			+
+			datafile
+			+
+			"menu.html"
+			);
+			let _datafiletext2 = await _datafileobject2.text();
+			
+			_datafiletext2 = 
+			_datafiletext2.replace(
+				"sectionxmenu",
+				datadestination
+				);
+			_datafiletext2 = 
+			_datafiletext2.replace(
+				"sectionxmenu_text_title",
+				sectionx_text_title
+				);
+			_datafiletext2 = 
+			_datafiletext2.replace(
+				"sectionxmenu_text_em",
+				sectionxmenu_text_em
+				);
+			_datafiletext2 = 
+			_datafiletext2.replace(
+				"sectionxmenu_text_sup",
+				sectionxmenu_text_sup
+				);
 						
-					$.ajax({
-					url: "./data/"+datafile+"menu.html",
-					global: false,
-					type: 'POST',
-					data: {},
-            		async: true,
-					success : function(response) {
+			$("#data_"+datadestination+"menu").html(
+				_datafiletext2
+				);
+			
+			_datafiletext = 
+			_datafiletext.replace(					"sectionx",
+				datadestination
+				);
+			_datafiletext = 
+			_datafiletext.replace(
+				"sectionx_data_destination",
+				sectionx_data_destination
+				);
+			_datafiletext = 
+			_datafiletext.replace(
+				"sectionx_text_title",
+				sectionx_text_title
+				);
 						
-					response = 
-					response.replace(
-						"sectionxmenu",
-						datadestination
-						);
-					response = 
-					response.replace(
-						"sectionxmenu_text_title",
-						sectionx_text_title
-						);
-					response = 
-					response.replace(
-						"sectionxmenu_text_em",
-						sectionxmenu_text_em
-						);
-					response = 
-					response.replace(
-						"sectionxmenu_text_sup",
-						sectionxmenu_text_sup
-						);
-						
-					$("#data_"+datadestination+"menu").html(response);
-						
-					}});
+		}
+		
+		if (fixbr === true) {
+			response =
+			response.replace(
+				/(?:\r\n|\r|\n)/g,
+				"<br>"
+				);
+		}
 					
-					response = 
-					response.replace(
-						"sectionx",
-						datadestination
-						);
-					response = 
-					response.replace(
-						"sectionx_data_destination",
-						sectionx_data_destination
-						);
-					response = 
-					response.replace(
-						"sectionx_text_title",
-						sectionx_text_title
-						);
-						
-					}
-					
-					if (fixbr === true) {
-					response =
-					response.replace
-						(/(?:\r\n|\r|\n)/g,
-						"<br>");
-					}
-					
-					$("#data_"+datadestination).html(response);
-					
-					if (recursive_datafile!==null) {
+		$("#data_"+datadestination).html(
+			_datafiletext
+			);
+			
+		if (recursive_datafile!==null) {
 						data_load(
 						recursive_datafile,
 						recursive_datadestination,
@@ -108,17 +110,15 @@
 						"",
 						false
 					);
-					}
-						
-					}});
-			}
-			$(document).ready (
-				function() {
-					/* w3IncludeHTML(); */
-					/* <div w3-include-html="./data/legal.html"></div> */
-					/* $("#data_legal").load("./data/leghal.html").replace(/(?:\r\n|\r|\n)/g, 'hhhhj<br>'); */
-					data_load(
-						"sectionx",
+		}
+	}
+	
+	async function load00() {
+		$('body').css('background', '#1E1E1E');
+	}
+	async function load0() {
+		const _l1 = await data_load(
+						"_sectionx",
 						"section1",
 						"data_legal",
 						"Legal disclaimer",
@@ -128,8 +128,8 @@
 						"legal",
 						false
 					);
-					data_load(
-						"sectionx",
+		const _l2 = await data_load(
+						"_sectionx",
 						"section2",
 						"data_socialmedia",
 						"Social media",
@@ -139,19 +139,19 @@
 						"socialmedia",
 						false
 					);
-					data_load(
-						"sectionx",
+		const _l3 = await data_load(
+						"_sectionx",
 						"section3",
 						"data_introduction",
 						"Introduction",
 						"2023-09-27",
 						"",
 						"introduction",
-						"introduction,",
+						"introduction",
 						false
 					);
-					data_load(
-						"sectionx",
+		const _l4 = await data_load(
+						"_sectionx",
 						"section4",
 						"data_chapteri",
 						"Chapter I",
@@ -161,8 +161,8 @@
 						"chapteri",
 						false
 					);
-					data_load(
-						"sectionx",
+		const _l5 = await data_load(
+						"_sectionx",
 						"section5",
 						"data_chapterii",
 						"Chapter II",
@@ -172,70 +172,36 @@
 						"chapterii",
 						false
 					);
-					/*data_load(
-						"legal",
-						"legal",
-						"",
-						"",
-						"",
-						"",
-						false
-					);
-					data_load(
-						"socialmedia",
-						"socialmedia",
-						"",
-						"",
-						"",
-						"",
-						false
-						);
-					data_load(
-						"introduction",
-						"introduction",
-						"",
-						"",
-						"",
-						"",
-						true
-						);
-					data_load(
-						"chapteri",
-						"chapteri",
-						"",
-						"",
-						"",
-						"",
-						false
-						);
-					data_load(
-						"chapterii",
-						"chapterii",
-						"",
-						"",
-						"",
-						"",
-						true
-						);*/
-					/*setTimeout(function(){$("#loading").remove();},999);*/
+		const _l00 = await load00();
+		setTimeout(
+			function(){$("#loading").remove();},
+			9
+			);
+	}
+	
+	
+			$(document).ready (
+				function() {
+					load0();
 				}
 			);
-		</script>
-	<title>
+</script>
+<title>
 		QuantumDreams7
-	</title>
+</title>
+
 </head>
 
 <body>
 	
-<div id="loading" style="font-family:georgia,serif;padding:99px;color:#FF0000;background-color:#000000; vertical-align:middle;  position:fixed; top:0px; left:0px; width:10%; height:10%; z-index:9999;">
+<div id="loading" style="font-family:georgia,serif;padding:99px;color:#FF0000;background-color:#000000; vertical-align:middle;  position:fixed; top:0px; left:0px; width:100%; height:100%; z-index:9999;">
 	Please wait, loading....
 </div>
   
 
 
 	<header>
-		<img src="./fractalcloudsheader.jpg" class="fractalcloudsheader">
+		<img src="./image/fractalcloudsheader.jpg" class="fractalcloudsheader">
 	</header>
 	<div id="nav-container">
 		<div class="bg"></div>
@@ -248,22 +214,22 @@
 				<ul>
 					<li>
 						<div class="profile">
-							<img src="./quantumdreams7profile.jpg">
+							<img src="./image/quantumdreams7profile.jpg">
 						</div>
 						<br/>
 				</li>
 				<li>
-					<a href="./">
+					<a href="#index">
 						𝑸𝒖𝒂𝒏𝒕𝒖𝒎𝑫𝒓𝒆𝒂𝒎𝒔7
 					</a>
 				</li>
 				<li>
-					<a href="./">
+					<a href="#index">
 						𝑸𝒖𝒂𝒏𝒕𝒖𝒎 𝒅𝒓𝒆𝒂𝒎𝒔 𝒂𝒓𝒆 𝒏𝒐𝒕 𝒅𝒓𝒆𝒂𝒎𝒔.
 					</a>
 				</li>
 				<li>
-					<a href="./">
+					<a href="#index">
 						𝑻𝒉𝒆 𝒘𝒐𝒓𝒅𝒔 𝒂𝒓𝒆 𝒏𝒐𝒕 𝒔𝒆𝒕 𝒊𝒏 𝒔𝒕𝒐𝒏𝒆 𝒃𝒆𝒄𝒂𝒖𝒔𝒆....
 						<br/>
 						𝑰 𝒂𝒎 𝒏𝒐𝒕 𝒂 𝒑𝒓𝒐𝒑𝒉𝒆𝒕.
