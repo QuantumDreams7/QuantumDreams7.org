@@ -13,10 +13,29 @@
 		<script src="./script/jquery-3.7.1.min.js"></script>
 		<script src="./script/w3data.js"></script>
 		<script>
+			function data_load(datafile, nobr) {
+				$.get(datafile, function(response) {
+						$("#data_legal").html(
+							(nobr === true)
+							?
+							response
+							:
+							response.replace(
+								/(?:\r\n|\r|\n)/g,
+								'<br>'
+							)
+						);
+					}
+				);
+			}
 			$(document).ready (
 				function() {
 					/* w3IncludeHTML(); */
-					$("#data_legal").load("./data/legal.html");
+					/* $("#data_legal").load("./data/leghal.html").replace(/(?:\r\n|\r|\n)/g, 'hhhhj<br>'); */
+					data_load(
+						"/data/legal.html",
+						true
+					);
 				}
 			);
 		</script>
@@ -82,38 +101,37 @@
 
 
 
-<main>
-<div class="content">
+	<main>
+		<div class="content">
 
-<div class="hiddentag">
-<a name="index" id="index">index</a>
-</div>
-<div class="divh1">
-<h1>Index</h1>
-</div>
-<br />
-<ul>
-<li>
-<a href="#legal">Legal disclaimer</a>
-<sup><sup><em></em></sup><sup></sup></sup>
-</li>
-<li>
-<a href="#socialmedia">Social media</a>
-<sup><sup><em>2023–09–30</em></sup><sup></sup></sup>
-</li>
-<li>
-<a href="#introduction">Introduction</a>
-<sup><sup><em>2023–09–27</em></sup><sup></sup></sup>
-</li>
-<li>
-<a href="#chapteri">Chapter I</a>
-<sup><sup><em>2023–09–27</em></sup><sup></sup></sup>
-</li>
-<li>
-<a href="#chapterii">Chapter II</a>
-<sup><sup><em>2023–09–30</em></sup><sup></sup></sup>
-</li>
-</ul>
+			<div class="hiddentag">
+				<a name="index" id="index">index</a>
+			</div>
+			<div class="divh1">
+				<h1>Index</h1>
+			</div>
+			<br>
+			<ul>
+				<li>
+					<a href="#legal">Legal disclaimer</a>
+				</li>
+				<li>
+					<a href="#socialmedia">Social media</a>
+					<sup><sup><em>2023–09–30</em></sup><sup></sup></sup>
+				</li>
+				<li>
+					<a href="#introduction">Introduction</a>
+					<sup><sup><em>2023–09–27</em></sup><sup></sup></sup>
+				</li>
+				<li>
+					<a href="#chapteri">Chapter I</a>
+					<sup><sup><em>2023–09–27</em></sup><sup></sup></sup>
+				</li>
+				<li>
+					<a href="#chapterii">Chapter II</a>
+					<sup><sup><em>2023–09–30</em></sup><sup></sup></sup>
+				</li>
+			</ul>
 
 
 

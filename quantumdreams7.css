@@ -1,6 +1,33 @@
 :root {
 	color-scheme: light only;
 }
+
+
+@-webkit-keyframes glowing {
+	from {
+  		box-shadow:
+    		0 0 10px #fff,
+    		0 0 20px #f0f,
+    		0 0 30px #f00,
+    		0 0 40px #900,
+    		0 0 50px #220000,
+    		0 0 60px #e60000,
+    		0 0 70px #e60000;
+	}
+	to {
+		box-shadow:
+		0 0 20px #fff,
+		0 0 30px #ff4da6,
+		0 0 40px #ff4da6,
+		0 0 50px #ff4da6,
+		0 0 60px #ff4da6,
+		0 0 70px #ff4da6,
+		0 0 80px #ff0000;
+	}
+}
+
+
+
 header {
 	background-position: left 0px top 0px;
 	background-size: cover;
@@ -77,6 +104,9 @@ header {
 			/* z-index:999; */
 			border: 1px solid #440000;
 			box-shadow: 0px 0px 19px 0px #ff0000;
+			-webkit-animation: glowing 1s ease-in-out infinite alternate;
+			-moz-animation: glowing 1s ease-in-out infinite alternate;
+			animation: glowing 1s ease-in-out infinite alternate;
 		}
 		.profile img {
 			width: 100%;
