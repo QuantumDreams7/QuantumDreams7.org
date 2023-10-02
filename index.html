@@ -13,29 +13,119 @@
 		<script src="./script/jquery-3.7.1.min.js"></script>
 		<script src="./script/w3data.js"></script>
 		<script>
-			function data_load(datafile, nobr) {
-				$.get(datafile, function(response) {
-						$("#data_legal").html(
-							(nobr === true)
-							?
-							response
-							:
-							response.replace(
-								/(?:\r\n|\r|\n)/g,
-								'<br>'
-							)
+			function data_load(
+				datafile,
+				datadestination,
+				sectionx_data_destination,
+				sectionx_text_title,
+				fixbr
+				) {
+				
+				
+						
+				$.ajax({
+					
+					url: "./data/"+datafile+".html",
+					global: false,
+					type: 'POST',
+					data: {},
+            		async: false,
+					success : function(response) {
+					
+					if (datafile==="sectionx") {
+						$("#data_menu"+datadestination).html(
+							sectionx_text_title
 						);
+						$("#data_menu"+datadestination).attr(
+							"href",
+							"#"+datadestination
+						);
+						$("#data_menu"+datadestination+"_a").html("-+!???:-:");
+					}
+						
+					response = 
+					response.replace("sectionx"
+						,
+						datadestination
+						);
+					response = 
+					response.replace("sectionx_data_destination"
+						,
+						sectionx_data_destination
+						);
+					response = 
+					response.replace("sectionx_text_title"
+						,
+						sectionx_text_title
+						);
+						
+					response = 
+					(fixbr === false)
+					?
+					response
+					:
+					response.replace
+						(/(?:\r\n|\r|\n)/g,
+						"<br>");
+						
+					$("#data_"+datadestination).html(
+						response
+					);
+					
+						
+					}
+					
+					
 					}
 				);
 			}
 			$(document).ready (
 				function() {
 					/* w3IncludeHTML(); */
+					/* <div w3-include-html="./data/legal.html"></div> */
 					/* $("#data_legal").load("./data/leghal.html").replace(/(?:\r\n|\r|\n)/g, 'hhhhj<br>'); */
 					data_load(
-						"/data/legal.html",
-						true
+						"sectionx",
+						"section1",
+						"data_legal",
+						"Legal disclaimer",
+						false
 					);
+					data_load(
+						"sectionx",
+						"section2",
+						"data_socialmedia",
+						"Social media",
+						false
+					);
+					data_load(
+						"sectionx",
+						"section3",
+						"data_introduction",
+						"Introduction",
+						false
+					);
+					data_load(
+						"legal",
+						"legal",
+						"",
+						"",
+						false
+					);
+					data_load(
+						"socialmedia",
+						"socialmedia",
+						"",
+						"",
+						false
+						);
+					data_load(
+						"introduction",
+						"introduction",
+						"",
+						"",
+						false
+						);
 				}
 			);
 		</script>
@@ -112,12 +202,30 @@
 			</div>
 			<br>
 			<ul>
+			<li>
+				<a id="data_menusection1"></a>
+				<sup>
+					<sup>
+						<em>
+							<div id="data_menusection1_a"></div>
+						</em>
+					</sup>
+					<sup>
+						<div id="data_menusection1_b"></div>
+					</sup>
+				</sup>
+			</li>
+			<li><a id="data_menusection2"></a></li>
+			<li><a id="data_menusection3"></a></li>
+			<li><a id="data_menusection4"></a></li>
+			<li><a id="data_menusection5"></a></li>
+			<li><a id="data_menusection6"></a></li>
+			<li><a id="data_menusection7"></a></li>
+			<li><a id="data_menusection8"></a></li>
+			<li><a id="data_menusection9"></a></li>
+			
 				<li>
-					<a href="#legal">Legal disclaimer</a>
-				</li>
-				<li>
-					<a href="#socialmedia">Social media</a>
-					<sup><sup><em>2023–09–30</em></sup><sup></sup></sup>
+					<a href="#socialmedia">Social media</a><sup><sup><em>2023–09–30</em></sup><sup></sup></sup>
 				</li>
 				<li>
 					<a href="#introduction">Introduction</a>
@@ -133,47 +241,18 @@
 				</li>
 			</ul>
 
+			<div id="data_section1"></div>
+			<div id="data_section2"></div>
+			<div id="data_section3"></div>
+			<div id="data_section4"></div>
+			<div id="data_section5"></div>
+			<div id="data_section6"></div>
+			<div id="data_section7"></div>
+			<div id="data_section8"></div>
+			<div id="data_section9"></div>
+		
+			
 
-
-<div class="hiddentag">
-<a name="legal" id="legal">legal</a>
-</div>
-<div class="divh2">
-<h2>Legal disclaimer <sup><sup>(<a href="#index">index</a>)</sup></sup></h2>
-</div>
-<br />
-<!--<div w3-include-html="./data/legal.html"></div>-->
-<div id="data_legal"></div>
-
-
-
-<div class="hiddentag">
-<a name="socialmedia" id="socialmedia">socialmedia</a>
-</div>
-<div class="divh2">
-<h2>Social media <sup><sup>(<a href="#index">index</a>)</sup></sup></h2>
-</div>
-<br />
-
-Don't get tricked and deceived by the deceivers, there are many imposters and many who copy/alter my words, beware that they give you poison when they alter and remove me from the words. Beside this website, I am not active anywhere else on the internet except the following places:
-<ul>
-<li>
-<a href="https://x.com/QuantumDreams7" target="_blank">𝕏: @QuantumDreams7</a>
-</li>
-<li>
-<a href="https://t.me/QuantumDreams" target="_blank">Telegram: QuantumDreams</a>
-</li>
-</ul>
-
-<div class="hiddentag">
-<a name="introduction" id="introduction">introduction</a>
-</div>
-<div class="divh2">
-<h2>Introduction <sup><sup>(<a href="#index">index</a>)</sup></sup></h2>
-</div>
-<br />
-
-I <del>found</del> was given a light.
 
 
 <div class="hiddentag">
