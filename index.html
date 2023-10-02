@@ -18,11 +18,11 @@
 				datadestination,
 				sectionx_data_destination,
 				sectionx_text_title,
+				sectionxmenu_text_em,
+				sectionxmenu_text_sup,
 				fixbr
 				) {
-				
-				
-						
+
 				$.ajax({
 					
 					url: "./data/"+datafile+".html",
@@ -33,51 +33,69 @@
 					success : function(response) {
 					
 					if (datafile==="sectionx") {
-						$("#data_menu"+datadestination).html(
-							sectionx_text_title
-						);
-						$("#data_menu"+datadestination).attr(
-							"href",
-							"#"+datadestination
-						);
-						$("#data_menu"+datadestination+"_a").html("-+!???:-:");
-					}
+						
+					$.ajax({
+					url: "./data/"+datafile+"menu.html",
+					global: false,
+					type: 'POST',
+					data: {},
+            		async: false,
+					success : function(response) {
 						
 					response = 
-					response.replace("sectionx"
-						,
+					response.replace(
+						"sectionxmenu",
 						datadestination
 						);
 					response = 
-					response.replace("sectionx_data_destination"
-						,
+					response.replace(
+						"sectionxmenu_text_title",
+						sectionx_text_title
+						);
+					response = 
+					response.replace(
+						"sectionxmenu_text_em",
+						sectionxmenu_text_em
+						);
+					response = 
+					response.replace(
+						"sectionxmenu_text_sup",
+						sectionxmenu_text_sup
+						);
+						
+					$("#data_"+datadestination+"menu").html(response);
+						
+					}});
+					
+					response = 
+					response.replace(
+						"sectionx",
+						datadestination
+						);
+					response = 
+					response.replace(
+						"sectionx_data_destination",
 						sectionx_data_destination
 						);
 					response = 
-					response.replace("sectionx_text_title"
-						,
+					response.replace(
+						"sectionx_text_title",
 						sectionx_text_title
 						);
 						
-					response = 
-					(fixbr === false)
-					?
-					response
-					:
+					}
+					
+					if (fixbr === true) {
+					response =
 					response.replace
 						(/(?:\r\n|\r|\n)/g,
 						"<br>");
-						
-					$("#data_"+datadestination).html(
-						response
-					);
-					
-						
 					}
 					
+					$("#data_"+datadestination).html(response);
 					
-					}
-				);
+						
+					}});
 			}
 			$(document).ready (
 				function() {
@@ -89,6 +107,8 @@
 						"section1",
 						"data_legal",
 						"Legal disclaimer",
+						"",
+						"",
 						false
 					);
 					data_load(
@@ -96,6 +116,8 @@
 						"section2",
 						"data_socialmedia",
 						"Social media",
+						"2023–09–30",
+						"",
 						false
 					);
 					data_load(
@@ -103,11 +125,33 @@
 						"section3",
 						"data_introduction",
 						"Introduction",
+						"2023-09-27",
+						"",
+						false
+					);
+					data_load(
+						"sectionx",
+						"section4",
+						"data_chapteri",
+						"Chapter I",
+						"2023-09-27",
+						"",
+						false
+					);
+					data_load(
+						"sectionx",
+						"section5",
+						"data_chapterii",
+						"Chapter II",
+						"2023-09-30",
+						"",
 						false
 					);
 					data_load(
 						"legal",
 						"legal",
+						"",
+						"",
 						"",
 						"",
 						false
@@ -117,6 +161,8 @@
 						"socialmedia",
 						"",
 						"",
+						"",
+						"",
 						false
 						);
 					data_load(
@@ -124,8 +170,29 @@
 						"introduction",
 						"",
 						"",
+						"",
+						"",
+						true
+						);
+					data_load(
+						"chapteri",
+						"chapteri",
+						"",
+						"",
+						"",
+						"",
 						false
 						);
+					data_load(
+						"chapterii",
+						"chapterii",
+						"",
+						"",
+						"",
+						"",
+						true
+						);
+					setTimeout(function(){$("#loading").remove();},999);
 				}
 			);
 		</script>
@@ -135,8 +202,11 @@
 </head>
 
 <body>
-
-
+	
+<div id="loading" style="padding:19px;color:#FF0000;background-color:#1E1E1E; position:fixed; top:0px; left:0px; width:100%; height:100%; z-index:9999;">
+	Please wait, loading....
+</div>
+  
 
 
 	<header>
@@ -187,10 +257,6 @@
 			</ul>
 		</div>
 	</div>
-
-
-
-
 	<main>
 		<div class="content">
 
@@ -202,43 +268,15 @@
 			</div>
 			<br>
 			<ul>
-			<li>
-				<a id="data_menusection1"></a>
-				<sup>
-					<sup>
-						<em>
-							<div id="data_menusection1_a"></div>
-						</em>
-					</sup>
-					<sup>
-						<div id="data_menusection1_b"></div>
-					</sup>
-				</sup>
-			</li>
-			<li><a id="data_menusection2"></a></li>
-			<li><a id="data_menusection3"></a></li>
-			<li><a id="data_menusection4"></a></li>
-			<li><a id="data_menusection5"></a></li>
-			<li><a id="data_menusection6"></a></li>
-			<li><a id="data_menusection7"></a></li>
-			<li><a id="data_menusection8"></a></li>
-			<li><a id="data_menusection9"></a></li>
-			
-				<li>
-					<a href="#socialmedia">Social media</a><sup><sup><em>2023–09–30</em></sup><sup></sup></sup>
-				</li>
-				<li>
-					<a href="#introduction">Introduction</a>
-					<sup><sup><em>2023–09–27</em></sup><sup></sup></sup>
-				</li>
-				<li>
-					<a href="#chapteri">Chapter I</a>
-					<sup><sup><em>2023–09–27</em></sup><sup></sup></sup>
-				</li>
-				<li>
-					<a href="#chapterii">Chapter II</a>
-					<sup><sup><em>2023–09–30</em></sup><sup></sup></sup>
-				</li>
+				<li id="data_section1menu"></li>
+				<li id="data_section2menu"></li>
+				<li id="data_section3menu"></li>
+				<li id="data_section4menu"></li>
+				<li id="data_section5menu"></li>
+				<li id="data_section6menu"></li>
+				<li id="data_section7menu"></li>
+				<li id="data_section8menu"></li>
+				<li id="data_section9menu"></li>
 			</ul>
 
 			<div id="data_section1"></div>
@@ -250,48 +288,16 @@
 			<div id="data_section7"></div>
 			<div id="data_section8"></div>
 			<div id="data_section9"></div>
-		
-			
 
-
-
-<div class="hiddentag">
-<a name="chapteri" id="chapteri">chapteri</a>
-</div>
-<div class="divh2">
-<h2>Chapter I <sup><sup>(<a href="#index">index</a>)</sup></sup></h2>
-</div>
-<br />
-
-
-יְהוָֹה
-
-<div class="markdown-alert markdown-alert-quote" dir="auto">
-<p dir="auto">
-In the beginning, אֱלֹהִ֑ים יְהוָֹה created the Heavens and the Earth. The Earth was formless and empty. Darkness was on the surface of the deep….
-</p>
-</div>
-....and so everything and everyone came to be by the words of Yahweh, blessed be His holy name.
-
-
-<div class="hiddentag">
-<a name="chapterii" id="chapterii">chapterii</a>
-</div>
-<div class="divh2">
-<h2>Chapter II <sup><sup>(<a href="#index">index</a>)</sup></sup></h2>
-</div>
-<br />
-
-The infections
-
-They came from space. They have been here a long long time.
-
-
-<div class="hiddentag">
-<a name="end" id="end">end</a>
-</div>
-</div>
-</main>
-
+			<div class="hiddentag">
+				<a name="end" id="end">end</a>
+			</div>
+		</div>
+	</main>
+	
+	
+	
+	
 </body>
+
 </html>
