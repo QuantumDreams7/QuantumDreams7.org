@@ -140,16 +140,19 @@
 		
 		try {
 			for (var i = 1; i <= 2; i++) {
-				document.getElementById(
-						"content"
-					
-				).appendChild (
+  				
+  				
+  				document.body.insertBefore(
   					await makeelement(
   						"div",
   						"data_section"+i,
   						""
-  					);
-					
+  					),
+					document.body.childNodes[0]
+				);
+				const para = document.createElement("p");
+para.innerHTML = "This is a paragraph.";
+				document.getElementById("content").appendChild(para);
 			}
 			
 }
