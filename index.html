@@ -25,8 +25,13 @@
 		recursive_datadestination,
 		fixbr
 		) {
+			alert(window.location.href)
 		let _datafileobject = await fetch(
-			"/data/text/"
+			(
+				((window.location.href.toLowerCase().indexOf("quantumdreams") >= 0) ?
+				"https://raw.githubusercontent.com/QuantumDreams7/QuantumDreams7.org/main/data/text/"
+				:
+				"/data/text/")
 			+
 			datafile
 			+
