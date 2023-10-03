@@ -12,7 +12,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/css/quantumdreams7.css">
 <script src="/script/jquery-3.7.1.min.js"></script>
-
 <script>
 	async function data_load(
 		datafile,
@@ -92,14 +91,18 @@
 				sectionx_text_title
 				);
 						
-		}
+		} else {
 		
-		if (fixbr === true) {
-			response =
-			response.replace(
-				/(?:\r\n|\r|\n)/g,
-				"<br>"
-				);
+			if (fixbr === true) {
+				console.log(_datafiletext);
+				_datafiletext =
+					_datafiletext.replace(
+						/(?:\r\n|\r|\n)/g,
+						"<br>"
+					);
+				
+			}
+		
 		}
 					
 		$("#data_"+datadestination).html(
@@ -116,7 +119,7 @@
 						"",
 						null,
 						"",
-						false
+						fixbr
 					);
 		}
 	}
@@ -125,7 +128,7 @@
 		$('body').css('background', '#1E1E1E');
 	}
 	async function load0() {
-		const _l1 = await data_load(
+		/*const _l1 = await data_load(
 						"_sectionx",
 						"section1",
 						"data_legal",
@@ -168,7 +171,7 @@
 						"chapteri",
 						"chapteri",
 						false
-					);
+					);*/
 		const _l5 = await data_load(
 						"_sectionx",
 						"section5",
@@ -178,7 +181,7 @@
 						"",
 						"chapterii",
 						"chapterii",
-						false
+						true
 					);
 		const _l00 = await load00();
 		setTimeout(
