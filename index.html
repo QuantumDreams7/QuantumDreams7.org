@@ -27,7 +27,7 @@
 		
 		let _datafoldertext = 
 			((window.location.href.toLowerCase().indexOf("quantumdreams") >= 0) ?
-				"/data/text/"
+				"https://raw.githubusercontent.com/QuantumDreams7/QuantumDreams7.org/main/data/text/"
 				:
 				"/data/text/");
 
@@ -138,21 +138,7 @@
 	}
 	async function load0() {
 		
-		try {
-  const _section = await makeelement("div", "_section","<div>Hello!</div><p>...</p>");
-  
-
-		document.body.insertBefore(
-			await makeelement(
-				"div",
-				"data_section1",
-				"<div>Hello!</div><p>...</p>"),
-				document.body.childNodes[0]
-		);
-}
-catch(err) {
-  alert(err)
-}
+		
 
 		
 		const _l1 = await data_load(
