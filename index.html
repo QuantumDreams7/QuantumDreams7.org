@@ -137,30 +137,23 @@
 		$('body').css('background', '#1E1E1E');
 	}
 	async function load0() {
-		
 		try {
-			for (var i = 1; i <= 2; i++) {
-  				
-  				
-  				document.body.insertBefore(
-  					await makeelement(
-  						"div",
-  						"data_section"+i,
-  						""
-  					),
-					document.body.childNodes[0]
-				);
-				const para = document.createElement("p");
-para.innerHTML = "This is a paragraph.";
-				document.getElementById("content").appendChild(para);
+			for (var i = 1; i <= 9; i++) {
+				document.getElementById(
+					"content"
+					).appendChild (
+  						await makeelement(
+  							"div",
+  							"data_section"+i,
+  							""
+  						)
+  					);
 			}
 			
-}
-catch(err) {
-  alert(err)
-}
-
-		
+		}
+		catch(error) {
+			alert(error)
+		}
 		const _l1 = await data_load(
 						"_sectionx",
 						"section1",
@@ -309,16 +302,6 @@ catch(err) {
 				<li id="data_section10menu"></li>
 			</ul>
 
-			<div id=""></div>
-			<div id="data_section2g"></div>
-			<div id="data_sectiongh3"></div>
-			<div id="data_section4"></div>
-			<div id="data_section5"></div>
-			<div id="data_section6"></div>
-			<div id="data_section7"></div>
-			<div id="data_section8"></div>
-			<div id="data_section9"></div>
-			<div id="data_section10"></div>
 			<div class="hiddentag">
 				<a id="end">end</a>
 			</div>
