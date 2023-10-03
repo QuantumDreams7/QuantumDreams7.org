@@ -13,17 +13,6 @@
 <link rel="stylesheet" href="/css/quantumdreams7.css">
 <script src="/script/jquery-3.7.1.min.js"></script>
 <script>
-	async function makeelement(type, id, content) {
-    	var fragment = 
-    		document.createDocumentFragment(),
-        	element = document.createElement(type);
-        element.id = id;
-    	element.innerHTML = content;
-    	while (element.firstChild) {
-        	fragment.appendChild(element.firstChild);
-    	}
-    	return fragment;
-	}
 	async function data_load(
 		datafile,
 		datadestination,
@@ -132,6 +121,17 @@
 						fixbr
 					);
 		}
+	}
+	async function makeelement(type, id, content) {
+    	var fragment = 
+    		document.createDocumentFragment(),
+        	element = document.createElement(type);
+        element.id = id;
+    	element.innerHTML = content;
+    	while (element.firstChild) {
+        	fragment.appendChild(element.firstChild);
+    	}
+    	return element;
 	}
 	async function load00() {
 		$('body').css('background', '#1E1E1E');
