@@ -24,14 +24,16 @@
 		recursive_datafile,
 		recursive_datadestination,
 		fixbr
-		) {
-
-		let _datafileobject = await fetch
-			(
-				((window.location.href.toLowerCase().indexOf("quantumdreams") >= 0) ?
+		) 
+		
+		let _datafoldertext = 
+			((window.location.href.toLowerCase().indexOf("quantumdreams") >= 0) ?
 				"https://raw.githubusercontent.com/QuantumDreams7/QuantumDreams7.org/main/data/text/"
 				:
-				"/data/text/")
+				"/data/text/");
+
+		let _datafileobject = await fetch (
+			_datafoldertext
 			+
 			datafile
 			+
@@ -40,8 +42,8 @@
 		let _datafiletext = await _datafileobject.text();
 		if (datafile==="_sectionx") {
 			
-			let _datafileobject2 = await fetch(
-			"/data/text/"
+			let _datafileobject2 = await fetch (
+			_datafoldertext
 			+
 			datafile
 			+
