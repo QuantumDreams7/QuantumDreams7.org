@@ -94,7 +94,6 @@
 		} else {
 		
 			if (fixbr === true) {
-				console.log(_datafiletext);
 				_datafiletext =
 					_datafiletext.replace(
 						/(?:\r\n|\r|\n)/g,
@@ -128,7 +127,7 @@
 		$('body').css('background', '#1E1E1E');
 	}
 	async function load0() {
-		/*const _l1 = await data_load(
+		const _l1 = await data_load(
 						"_sectionx",
 						"section1",
 						"data_legal",
@@ -171,7 +170,7 @@
 						"chapteri",
 						"chapteri",
 						false
-					);*/
+					);
 		const _l5 = await data_load(
 						"_sectionx",
 						"section5",
