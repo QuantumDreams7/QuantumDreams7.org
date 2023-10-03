@@ -148,6 +148,15 @@
   							""
   						)
   					);
+  					document.getElementById(
+					"contentmenu"
+					).appendChild(
+  						await makeelement(
+  							"div",
+  							"data_section"+i+"menu",
+  							""
+  						)
+  					);
 			}
 			
 		}
@@ -289,18 +298,7 @@
 				</h1>
 			</div>
 			<br>
-			<ul>
-				<li id="data_section1menu"></li>
-				<li id="data_section2menu"></li>
-				<li id="data_section3menu"></li>
-				<li id="data_section4menu"></li>
-				<li id="data_section5menu"></li>
-				<li id="data_section6menu"></li>
-				<li id="data_section7menu"></li>
-				<li id="data_section8menu"></li>
-				<li id="data_section9menu"></li>
-				<li id="data_section10menu"></li>
-			</ul>
+			<ul id="contentmenu"></ul>
 		</div>
 		<div>
 			<div class="hiddentag">
