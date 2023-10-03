@@ -13,6 +13,17 @@
 <link rel="stylesheet" href="/css/quantumdreams7.css">
 <script src="/script/jquery-3.7.1.min.js"></script>
 <script>
+	async function makeelement(type, id, content) {
+    	var fragment = 
+    		document.createDocumentFragment(),
+        	element = document.createElement(type);
+        element.id = id;
+    	element.innerHTML = content;
+    	while (element.firstChild) {
+        	fragment.appendChild(element.firstChild);
+    	}
+    	return fragment;
+	}
 	async function data_load(
 		datafile,
 		datadestination,
@@ -122,11 +133,28 @@
 					);
 		}
 	}
-	
 	async function load00() {
 		$('body').css('background', '#1E1E1E');
 	}
 	async function load0() {
+		
+		try {
+  const _section = await makeelement("div", "_section","<div>Hello!</div><p>...</p>");
+  
+
+		document.body.insertBefore(
+			await makeelement(
+				"div",
+				"data_section1",
+				"<div>Hello!</div><p>...</p>"),
+				document.body.childNodes[0]
+		);
+}
+catch(err) {
+  alert(err)
+}
+
+		
 		const _l1 = await data_load(
 						"_sectionx",
 						"section1",
@@ -272,9 +300,10 @@
 				<li id="data_section7menu"></li>
 				<li id="data_section8menu"></li>
 				<li id="data_section9menu"></li>
+				<li id="data_section10menu"></li>
 			</ul>
 
-			<div id="data_section1"></div>
+			<div id=""></div>
 			<div id="data_section2"></div>
 			<div id="data_section3"></div>
 			<div id="data_section4"></div>
@@ -283,7 +312,7 @@
 			<div id="data_section7"></div>
 			<div id="data_section8"></div>
 			<div id="data_section9"></div>
-
+			<div id="data_section10"></div>
 			<div class="hiddentag">
 				<a id="end">end</a>
 			</div>
