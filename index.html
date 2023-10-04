@@ -13,223 +13,6 @@
 <link rel="stylesheet" href="/css/quantumdreams7.css">
 <script src="/script/jquery-3.7.1.min.js"></script>
 <script>
-	async function data_load(
-		datafile,
-		datadestination,
-		sectionx_data_destination,
-		sectionx_text_title,
-		sectionxmenu_text_em,
-		sectionxmenu_text_sup,
-		recursive_datafile,
-		recursive_datadestination,
-		fixbr
-		) {
-		
-		let _datafoldertext = 
-			((window.location.href.toLowerCase().indexOf("quantumdreams") >= 0) ?
-				"https://raw.githubusercontent.com/QuantumDreams7/QuantumDreams7.org/main/data/text/"
-				:
-				"/data/text/");
-
-		let _datafileobject = await fetch (
-			_datafoldertext
-			+
-			datafile
-			+
-			".html"
-			);
-		let _datafiletext = await _datafileobject.text();
-		if (datafile==="_sectionx") {
-			
-			let _datafileobject2 = await fetch (
-			_datafoldertext
-			+
-			datafile
-			+
-			"menu.html"
-			);
-			let _datafiletext2 = await _datafileobject2.text();
-			
-			_datafiletext2 = 
-			_datafiletext2.replace(
-				"sectionxmenu",
-				datadestination
-				);
-			_datafiletext2 = 
-			_datafiletext2.replace(
-				"sectionxmenu_text_title",
-				sectionx_text_title
-				);
-			_datafiletext2 = 
-			_datafiletext2.replace(
-				"sectionxmenu_text_em",
-				sectionxmenu_text_em
-				);
-			_datafiletext2 = 
-			_datafiletext2.replace(
-				"sectionxmenu_text_sup",
-				sectionxmenu_text_sup
-				);
-						
-			$("#data_"+datadestination+"menu").html(
-				_datafiletext2
-				);
-			
-			_datafiletext = 
-			_datafiletext.replace(
-				"sectionx",
-				datadestination
-				);
-			_datafiletext = 
-			_datafiletext.replace(
-				"sectionx_data_destination",
-				sectionx_data_destination
-				);
-			_datafiletext = 
-			_datafiletext.replace(
-				"sectionx_text_title",
-				sectionx_text_title
-				);
-						
-		} else {
-		
-			if (fixbr === true) {
-				_datafiletext =
-					_datafiletext.replace(
-						/(?:\r\n|\r|\n)/g,
-						"<br>"
-					);
-			}
-		
-		}
-					
-		$("#data_"+datadestination).html(
-			_datafiletext
-			);
-			
-		if (recursive_datafile!==null) {
-						data_load(
-						recursive_datafile,
-						recursive_datadestination,
-						"",
-						"",
-						"",
-						"",
-						null,
-						"",
-						fixbr
-					);
-		}
-	}
-	async function data_loadT(
-		datafile,
-		datadestination,
-		sectionx_data_destination,
-		sectionx_text_title,
-		sectionxmenu_text_em,
-		sectionxmenu_text_sup,
-		recursive_datafile,
-		recursive_datadestination,
-		fixbr
-		) {
-		
-		let _datafoldertext = 
-			((window.location.href.toLowerCase().indexOf("quantumdreams") >= 0) ?
-				"https://raw.githubusercontent.com/QuantumDreams7/QuantumDreams7.org/main/data/text/"
-				:
-				"/data/text/");
-
-		let _datafileobject = await fetch (
-			_datafoldertext
-			+
-			datafile
-			+
-			".html"
-			);
-		let _datafiletext = await _datafileobject.text();
-		/*if (datafile==="_sectionx") {
-			
-			let _datafileobject2 = await fetch (
-			_datafoldertext
-			+
-			datafile
-			+
-			"menu.html"
-			);
-			let _datafiletext2 = await _datafileobject2.text();
-			
-			_datafiletext2 = 
-			_datafiletext2.replace(
-				"sectionxmenu",
-				datadestination
-				);
-			_datafiletext2 = 
-			_datafiletext2.replace(
-				"sectionxmenu_text_title",
-				sectionx_text_title
-				);
-			_datafiletext2 = 
-			_datafiletext2.replace(
-				"sectionxmenu_text_em",
-				sectionxmenu_text_em
-				);
-			_datafiletext2 = 
-			_datafiletext2.replace(
-				"sectionxmenu_text_sup",
-				sectionxmenu_text_sup
-				);
-						
-			$("#data_"+datadestination+"menu").html(
-				_datafiletext2
-				);
-			
-			_datafiletext = 
-			_datafiletext.replace(
-				"sectionx",
-				datadestination
-				);
-			_datafiletext = 
-			_datafiletext.replace(
-				"sectionx_data_destination",
-				sectionx_data_destination
-				);
-			_datafiletext = 
-			_datafiletext.replace(
-				"sectionx_text_title",
-				sectionx_text_title
-				);
-						
-		} else {
-		
-			if (fixbr === true) {
-				_datafiletext =
-					_datafiletext.replace(
-						/(?:\r\n|\r|\n)/g,
-						"<br>"
-					);
-			}
-		
-		}*/
-		
-		//$("#section1_text_title").html("hhjk");
-		$("#section1_data_destination").html(
-			_datafiletext
-			);
-			
-		/*if (recursive_datafile!==null) {
-						data_loadT(
-						recursive_datafile,
-						recursive_datadestination,
-						"",
-						"",
-						"",
-						"",
-						null,
-						"",
-						fixbr
-					);
-		}*/
-	}
 	async function makeelement(type, id, content) {
     const fragment = 
     	document.createDocumentFragment();
@@ -244,6 +27,19 @@
 	}
 	async function load0() {
 		try {
+			const textblock_quote_start = "<div class=\"markdown-alert markdown-alert-quote\" dir=\"auto\"><p dir=\"auto\">";
+			const textblock_quote_end = "</p></div>";
+			const _quote = "@quote";
+			const quote_ = "quote@";
+			const textblock_information_start = "<div class=\"markdown-alert markdown-alert-note\" dir=\"auto\"><p dir=\"auto\"><span class=\"color-fg-accent text-semibold d-inline-flex flex-items-center mb-1\"><svg class=\"octicon octicon-info mr-2\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z\"></path></svg></span><br>";
+			const textblock_information_end = "</p></div>";
+			
+			const textblock_important_start = "<div class=\"markdown-alert markdown-alert-important\" dir=\"auto\"><p dir=\"auto\"><span class=\"color-fg-done text-semibold d-inline-flex flex-items-center mb-1\"><svg class=\"octicon octicon-info mr-2\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z\"></path></svg></span><br>";
+			const textblock_important_end = "</p></div>";
+			
+			const textblock_warning_start = "<div class=\"markdown-alert markdown-alert-warning\" dir=\"auto\"><p dir=\"auto\"><span class=\"color-fg-attention text-semibold d-inline-flex flex-items-center mb-1\"><svg class=\"octicon octicon-info mr-2\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z\"></path></svg></span><br>";
+			const textblock_warning_end = "</p></div>";
+			
 			const _datafoldertext = 
 			((window.location.href.toLowerCase().indexOf("quantumdreams") >= 0) ?
 				"https://raw.githubusercontent.com/QuantumDreams7/QuantumDreams7.org/main/data/text/"
@@ -281,85 +77,69 @@
   				if (window.location.href.toLowerCase().indexOf("quantumdreams") < 0) {
   					_datafiletext = _datafiletext.substring(900);
   					}
+  				let _datafiletexts = _datafiletext.split("\n");
   				document.getElementById(
   					"section"+i+"menu_text_title"
-  					).innerHTML = _datafiletext.split('\n')[0];
+  					).innerHTML = _datafiletexts[0];
   				document.getElementById(
   					"section"+i+"menu_text_em"
-  					).innerHTML = _datafiletext.split('\n')[1];
+  					).innerHTML = _datafiletexts[1];
   				document.getElementById(
   					"section"+i+"menu_text_sup"
-  					).innerHTML = _datafiletext.split('\n')[2];
+  					).innerHTML = _datafiletexts[2];
   				document.getElementById(
   					"section"+i+"_text_title"
-  					).innerHTML = _datafiletext.split('\n')[3]
+  					).innerHTML = _datafiletexts[3]
   						+
   						"<sup><sup>(<a href=\"#index\">index</a>)</sup></sup>";
-  				_datafiletext = _datafiletext.split('\n').splice(5,_datafiletext.length).join("\n");
+  				for (var ii = 0; ii < _datafiletexts.length; ii++) {
+    				if (_datafiletexts[ii]==="") {
+    						_datafiletexts[ii] = 
+    						"<br>"
+    				}
+					}
+  				_datafiletexts = _datafiletexts.splice(5,_datafiletext.length).join("\n");
+  				_datafiletexts = _datafiletexts.replace(
+  						_quote,
+  						textblock_quote_start
+  					);
+  				_datafiletexts = _datafiletexts.replace(
+  						quote_,
+  						textblock_quote_end,
+  					);
+  				_datafiletexts = _datafiletexts.replace(
+  						/@information/g,
+  						textblock_information_start
+  					);
+  				_datafiletexts = _datafiletexts.replace(
+  						/information@/g,
+  						textblock_information_end,
+  					);
+  				_datafiletexts = _datafiletexts.replace(
+  						/@attention/g,
+  						textblock_important_start
+  					);
+  				_datafiletexts = _datafiletexts.replace(
+  						/attention@/g,
+  						textblock_important_end,
+  					);
+  				_datafiletexts = _datafiletexts.replace(
+  						/@warning/g,
+  						textblock_warning_start
+  					);
+  				_datafiletexts = _datafiletexts.replace(
+  						/warning@/g,
+  						textblock_warning_end,
+  					);
   				document.getElementById(
   					"section"+i+"_text"
-  					).innerHTML = _datafiletext;
+  					).innerHTML = _datafiletexts;
 			}
 			
 		}
 		catch(error) {
 			alert(error)
 		}
-		/*await data_load(
-						"_sectionx",
-						"section1",
-						"data_legal",
-						"Legtal disclaimer",
-						"",
-						"",
-						"legal",
-						"legal",
-						false
-					);
-		await data_load(
-						"_sectionx",
-						"section2",
-						"data_socialmedia",
-						"Social media",
-						"2023–09–30",
-						"",
-						"socialmedia",
-						"socialmedia",
-						false
-					);
-		await data_load(
-						"_sectionx",
-						"section3",
-						"data_introduction",
-						"Introduction",
-						"2023-09-27",
-						"",
-						"introduction",
-						"introduction",
-						false
-					);
-		await data_load(
-						"_sectionx",
-						"section4",
-						"data_chapteri",
-						"Chapter I",
-						"2023-09-27",
-						"",
-						"chapteri",
-						"chapteri",
-						false
-					);
-		await data_load(
-						"_sectionx",
-						"section5",
-						"data_chapterii",
-						"Chapter II",
-						"2023-09-30",
-						"",
-						"chapterii",
-						"chapterii",
-						true
-					);*/
 		const _l00 = await load00();
 		setTimeout(
 			function(){$("#loading").remove();},
