@@ -183,7 +183,7 @@
 				_datafiletext2
 				);
 			
-			_datafiletext = 
+			/*_datafiletext = 
 			_datafiletext.replace(
 				"sectionx",
 				datadestination
@@ -197,7 +197,7 @@
 			_datafiletext.replace(
 				"sectionx_text_title",
 				sectionx_text_title
-				);
+				);*/
 						
 		} else {
 		
@@ -252,16 +252,7 @@
   						await makeelement(
   							"div",
   							"data_section"+i,
-  							"
-  							<div class=\"hiddentag\">
-	<a id=\"sectionx\">sectionx</a>
-</div>
-<div class=\"divh2\">
-	<h2>sectionx_text_title <sup><sup>(<a href=\"#index\">index</a>)</sup></sup></h2>
-</div>
-<br>
-<div id=\"sectionx_data_destination\"></div>
-  							"
+  							"<div class=\"hiddentag\"><a id=\"section"+i+"\">section"+i+"</a></div><div class=\"divh2\"><h2>section"+i+"_text_title <sup><sup>(<a href=\"#index\">index</a>)</sup></sup></h2></div><br><div id=\"section"+i+"_data_destination\"></div>"
   						)
   					);
   					document.getElementById(
@@ -273,7 +264,7 @@
   							""
   						)
   					);
-  				await data_loadT(
+  				/*await data_loadT(
 						"_sectionx",
 						"section1",
 						"data_legal",
@@ -283,7 +274,7 @@
 						"legal",
 						"legal",
 						false
-					);
+					);*/
 			}
 			
 		}
