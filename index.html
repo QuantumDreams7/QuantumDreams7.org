@@ -183,7 +183,7 @@
 				_datafiletext2
 				);
 			
-			/*_datafiletext = 
+			_datafiletext = 
 			_datafiletext.replace(
 				"sectionx",
 				datadestination
@@ -197,7 +197,7 @@
 			_datafiletext.replace(
 				"sectionx_text_title",
 				sectionx_text_title
-				);*/
+				);
 						
 		} else {
 		
@@ -238,7 +238,7 @@
     	while (element.firstChild) {
         	fragment.appendChild(element.firstChild);
     	}
-    	return element;
+    	return fragment;
 	}
 	async function load00() {
 		$('body').css('background', '#1E1E1E');
@@ -264,7 +264,7 @@
   							""
   						)
   					);
-  				/*await data_loadT(
+  				await data_loadT(
 						"_sectionx",
 						"section1",
 						"data_legal",
@@ -274,7 +274,7 @@
 						"legal",
 						"legal",
 						false
-					);*/
+					);
 			}
 			
 		}
