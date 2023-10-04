@@ -153,6 +153,19 @@
 			load0();
 		}
 	);
+	
+	function textsizeplus() {
+		const element = document.querySelector('body')
+		const style = getComputedStyle(element)
+		var fontsize = parseInt(style.fontSize)+2;
+		document.body.style.fontSize = fontsize+"px";
+	}
+	function textsizeminus() {
+		const element = document.querySelector('body')
+		const style = getComputedStyle(element)
+		var fontsize = parseInt(style.fontSize)-2;
+		document.body.style.fontSize = fontsize+"px";
+	}
 </script>
 <title>
 		QuantumDreams7
@@ -172,6 +185,16 @@
 	<header>
 		<img alt="QuantumDreams7" src="/image/fractalcloudsheader.jpg" class="fractalcloudsheader">
 	</header>
+	<div class="textsizeplusdiv">
+		<button onclick="textsizeplus();" class="textsizeplus">
+			T+
+		</button>
+	</div>
+	<div class="textsizeminusdiv">
+		<button onclick="textsizeminus();" class="textsizeminus">
+			T-
+		</button>
+	</div>
 	<div id="nav-container">
 		<div class="bg"></div>
 		<div class="button" tabindex="0">
