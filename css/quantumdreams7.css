@@ -27,6 +27,51 @@
 }
 
 
+.textsizeplusdiv {
+	position:fixed;z-index:666;
+	left:99px;top:98px;
+	font-size:14px;
+}
+
+.textsizeplus {display:inline-block;
+  width:29px;
+  height:19px;
+  
+  /*background:
+    linear-gradient(#e0b899 0 0),
+    linear-gradient(#e0b899 0 0),
+    #000;
+  background-position:center;
+  background-size: 50% 3px,3px 50%; /*thickness = 2px, length = 50% (25px)*/
+  background-repeat:no-repeat;
+  
+  color:#e0b899;background-color:#00000000;border:2px solid;font-weight:bold;
+			
+  border-radius: 4%;
+}
+
+.textsizeminusdiv {
+	position:fixed;z-index:666;
+	left:57px;top:98px;
+	font-size:14px;
+}
+
+.textsizeminus {display:inline-block;
+  width:29px;
+  height:19px;
+  
+  /*background:
+    linear-gradient(#e0b899 0 0),
+    linear-gradient(#e0b899 0 0),
+    #000;
+  background-position:center;
+  background-size: 50% 3px,3px 50%; /*thickness = 2px, length = 50% (25px)*/
+  background-repeat:no-repeat;
+  
+  color:#e0b899;background-color:#00000000;border:2px solid;font-weight:bold;
+			
+  border-radius: 4%;
+}
 
 header {
 	background-position: left 0px top 0px;
