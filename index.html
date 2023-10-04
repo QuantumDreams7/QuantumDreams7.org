@@ -266,7 +266,7 @@
   						await makeelement(
   							"div",
   							"data_section"+i+"menu",
-  							"<a href=\"#section"+i+"menu\">section"+i+"menu_text_title</a><sup><sup><em>section"+i+"menu_text_em</em></sup><sup>sectionxmenu_text_sup</sup></sup>"
+  							"<a href=\"#section"+i+"menu\" id=\"section"+i+"menu_text_title\"></a><sup><sup><em id=\"section"+i+"menu_text_em\">em</em></sup><sup id=\"section"+i+"menu_text_sup\">sup</sup></sup>"
   						)
   					);
   				document.getElementById(
@@ -280,7 +280,7 @@
   					);
   					alert(_datafiletext.split('\n')[0])
   				document.getElementById(
-  					"section"+i+"_text_title"
+  					"section"+i+"menu_text_title"
   					).innerHTML = _datafiletext.split('\n')[0];
   				await data_loadT(
 						"legal",
