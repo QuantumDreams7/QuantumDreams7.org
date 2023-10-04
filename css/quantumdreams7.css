@@ -247,6 +247,10 @@ header {
 			height: 100%;
 		}
 
+a:hover {
+color: #BF7497;
+text-decoration: none;
+}
 		a,
 		a:visited,
 		a:focus,
@@ -258,7 +262,7 @@ header {
 
 		a {
 			color: currentColor;
-			transition: .2s ease-in-out;
+			transition: .1s ease-in-out;
 		}
 
 		h1, h2, h3, h4 {
@@ -425,8 +429,7 @@ img {
 		body {
 font-size: 14px;
 
-    line-height: 1.5
-    ;
+    line-height: 1.5;
 			font-family: "Newsreader", "serif";
 			font-weight: normal;
 
