@@ -99,7 +99,114 @@
 						/(?:\r\n|\r|\n)/g,
 						"<br>"
 					);
-				
+			}
+		
+		}
+					
+		$("#data_"+datadestination).html(
+			_datafiletext
+			);
+			
+		if (recursive_datafile!==null) {
+						data_load(
+						recursive_datafile,
+						recursive_datadestination,
+						"",
+						"",
+						"",
+						"",
+						null,
+						"",
+						fixbr
+					);
+		}
+	}
+	async function data_loadT(
+		datafile,
+		datadestination,
+		sectionx_data_destination,
+		sectionx_text_title,
+		sectionxmenu_text_em,
+		sectionxmenu_text_sup,
+		recursive_datafile,
+		recursive_datadestination,
+		fixbr
+		) {
+		
+		let _datafoldertext = 
+			((window.location.href.toLowerCase().indexOf("quantumdreams") >= 0) ?
+				"https://raw.githubusercontent.com/QuantumDreams7/QuantumDreams7.org/main/data/text/"
+				:
+				"/data/text/");
+
+		let _datafileobject = await fetch (
+			_datafoldertext
+			+
+			datafile
+			+
+			".html"
+			);
+		let _datafiletext = await _datafileobject.text();
+		if (datafile==="_sectionx") {
+			
+			let _datafileobject2 = await fetch (
+			_datafoldertext
+			+
+			datafile
+			+
+			"menu.html"
+			);
+			let _datafiletext2 = await _datafileobject2.text();
+			
+			_datafiletext2 = 
+			_datafiletext2.replace(
+				"sectionxmenu",
+				datadestination
+				);
+			_datafiletext2 = 
+			_datafiletext2.replace(
+				"sectionxmenu_text_title",
+				sectionx_text_title
+				);
+			_datafiletext2 = 
+			_datafiletext2.replace(
+				"sectionxmenu_text_em",
+				sectionxmenu_text_em
+				);
+			_datafiletext2 = 
+			_datafiletext2.replace(
+				"sectionxmenu_text_sup",
+				sectionxmenu_text_sup
+				);
+						
+			$("#data_"+datadestination+"menu").html(
+				_datafiletext2
+				);
+			
+			_datafiletext = 
+			_datafiletext.replace(
+				"sectionx",
+				datadestination
+				);
+			_datafiletext = 
+			_datafiletext.replace(
+				"sectionx_data_destination",
+				sectionx_data_destination
+				);
+			_datafiletext = 
+			_datafiletext.replace(
+				"sectionx_text_title",
+				sectionx_text_title
+				);
+						
+		} else {
+		
+			if (fixbr === true) {
+				_datafiletext =
+					_datafiletext.replace(
+						/(?:\r\n|\r|\n)/g,
+						"<br>"
+					);
 			}
 		
 		}
@@ -138,14 +245,23 @@
 	}
 	async function load0() {
 		try {
-			for (var i = 1; i <= 9; i++) {
+			for (var i = 1; i <= 1; i++) {
 				document.getElementById(
 					"content"
 					).appendChild(
   						await makeelement(
   							"div",
   							"data_section"+i,
-  							""
+  							"
+  							<div class=\"hiddentag\">
+	<a id=\"sectionx\">sectionx</a>
+</div>
+<div class=\"divh2\">
+	<h2>sectionx_text_title <sup><sup>(<a href=\"#index\">index</a>)</sup></sup></h2>
+</div>
+<br>
+<div id=\"sectionx_data_destination\"></div>
+  							"
   						)
   					);
   					document.getElementById(
@@ -157,13 +273,24 @@
   							""
   						)
   					);
+  				await data_loadT(
+						"_sectionx",
+						"section1",
+						"data_legal",
+						"Legal disclaimer",
+						"",
+						"",
+						"legal",
+						"legal",
+						false
+					);
 			}
 			
 		}
 		catch(error) {
 			alert(error)
 		}
-		await data_load(
+		/*await data_load(
 						"_sectionx",
 						"section1",
 						"data_legal",
@@ -217,7 +344,7 @@
 						"chapterii",
 						"chapterii",
 						true
-					);
+					);*/
 		const _l00 = await load00();
 		setTimeout(
 			function(){$("#loading").remove();},
