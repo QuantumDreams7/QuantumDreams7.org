@@ -249,11 +249,11 @@
 				"https://raw.githubusercontent.com/QuantumDreams7/QuantumDreams7.org/main/data/text/"
 				:
 				"/data/text/");
-			for (var i = 1; i <= 1; i++) {
+			for (var i = 1; i <= 5; i++) {
 				let _datafileobject = await fetch (
 					_datafoldertext
 					+
-					"legal"
+					i
 					+
 					".html"
 				);
@@ -266,7 +266,7 @@
   						await makeelement(
   							"div",
   							"data_section"+i+"menu",
-  							"<a href=\"#section"+i+"menu\" id=\"section"+i+"menu_text_title\"></a><sup><sup><em id=\"section"+i+"menu_text_em\">em</em></sup><sup id=\"section"+i+"menu_text_sup\">sup</sup></sup>"
+  							"<a href=\"#section"+i+"\" id=\"section"+i+"menu_text_title\"></a><sup><sup><em id=\"section"+i+"menu_text_em\">em</em></sup><sup id=\"section"+i+"menu_text_sup\">sup</sup></sup>"
   						)
   					);
   				document.getElementById(
@@ -275,24 +275,30 @@
   						await makeelement(
   							"div",
   							"data_section"+i,
-  							"<div class=\"hiddentag\"><a id=\"section"+i+"\">section"+i+"</a></div><div class=\"divh2\"><h2 id=\"section"+i+"_text_title\"><sup><sup>(<a href=\"#index\">index</a>)</sup></sup></h2></div><br><div id=\"section"+i+"_data_destination\"></div>"
+  							"<div class=\"hiddentag\"><a id=\"section"+i+"\">section"+i+"</a></div><div class=\"divh2\"><h2 id=\"section"+i+"_text_title\"></h2></div><br><div id=\"section"+i+"_text\"></div>"
   						)
   					);
-  					alert(_datafiletext.split('\n')[0])
+  				if (window.location.href.toLowerCase().indexOf("quantumdreams") < 0) {
+  					_datafiletext = _datafiletext.substring(900);
+  					}
   				document.getElementById(
   					"section"+i+"menu_text_title"
   					).innerHTML = _datafiletext.split('\n')[0];
-  				await data_loadT(
-						"legal",
-						"section1_data_destination",
-						"data_legal",
-						"Legal disclaimer",
-						"",
-						"",
-						"legal",
-						"legal",
-						false
-					);
+  				document.getElementById(
+  					"section"+i+"menu_text_em"
+  					).innerHTML = _datafiletext.split('\n')[1];
+  				document.getElementById(
+  					"section"+i+"menu_text_sup"
+  					).innerHTML = _datafiletext.split('\n')[2];
+  				document.getElementById(
+  					"section"+i+"_text_title"
+  					).innerHTML = _datafiletext.split('\n')[3]
+  						+
+  						"<sup><sup>(<a href=\"#index\">index</a>)</sup></sup>";
+  				_datafiletext = _datafiletext.split('\n').splice(5,_datafiletext.length).join("\n");
+  				document.getElementById(
+  					"section"+i+"_text"
+  					).innerHTML = _datafiletext;
 			}
 			
 		}
