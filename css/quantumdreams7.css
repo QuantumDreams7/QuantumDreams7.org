@@ -277,7 +277,7 @@ header {
 			padding-left: 2px;
 			padding-top: 9px;
 			display: block;
-			text-transform: uppercase;
+			/*text-transform: uppercase;*/
 			transition: color .1s;
 		}
 
@@ -500,6 +500,13 @@ sup {
 img {
     border-style: none
 }
+.titletext {
+	margin-top:-4px;
+    line-height: 1.5;
+			font-weight: bold;
+			font-style:italic;
+			font-family: "NimbusRomNo9L", "serif";
+}
 		body {
 font-size: 16px;
 
@@ -635,17 +642,45 @@ font-size: 16px;
 		}
 		/* newsreader-800 - latin_latin-ext */
 		@font-face {
-			font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+			font-display: swap;
 			font-family: 'Newsreader';
 			font-style: normal;
 			font-weight: 800;
-			src: url('/font/newsreader-v20-latin_latin-ext-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+			src: url('/font/newsreader-v20-latin_latin-ext-800.woff2') format('woff2');
 		}
-		/* newsreader-800italic - latin_latin-ext */
 		@font-face {
-			font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+			font-display: swap;
 			font-family: 'Newsreader';
 			font-style: italic;
 			font-weight: 800;
-			src: url('/font/newsreader-v20-latin_latin-ext-800italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+			src: url('/font/newsreader-v20-latin_latin-ext-800italic.woff2') format('woff2');
 		}
+		
+		
+		
+		@font-face {
+			font-display: swap;
+			font-family: 'NimbusRomNo9L';
+			font-style: italic;
+			font-weight: bold;
+			src: url('/font/NimbusRomNo9L-MedIta.otf') format("opentype");
+		}
+		@font-face {
+			font-display: swap;
+			font-family: 'NimbusRomNo9L';
+			font-weight: bold;
+			src: url('/font/NimbusRomNo9L-Med.otf') format("opentype");
+		}		
+		@font-face {
+			font-display: swap;
+			font-family: 'NimbusRomNo9L';
+			font-style: italic;
+			font-weight: normal;
+			src: url('/font/NimbusRomNo9L-RegIta.otf') format("opentype");
+		}				
+		@font-face {
+			font-display: swap;
+			font-family: 'NimbusRomNo9L';
+			font-weight: normal;
+			src: url('/font/NimbusRomNo9L-Reg.otf') format("opentype");
+		}				
