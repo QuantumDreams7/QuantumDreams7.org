@@ -23,7 +23,14 @@
     	return fragment;
 	}
 	async function load00() {
-		$('body').css('background', '#1E1E1E');
+		const plefs = window.location.href.toLowerCase().indexOf("#");
+		if (plefs >= 0) {
+				window.location.href = window.location.href.substring(
+						plefs,
+						window.location.href.length
+						);
+			}
+		$("body").css("background", "#1E1E1E");
 	}
 	async function load0() {
 		try {
