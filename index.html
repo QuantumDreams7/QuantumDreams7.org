@@ -13,6 +13,15 @@
 <link rel="stylesheet" href="/css/quantumdreams7.css">
 <script src="/script/jquery-3.7.1.min.js"></script>
 <script>
+const getSHA512Hash = async (input) => {
+  const textAsBuffer = new TextEncoder().encode(input);
+  const hashBuffer = await window.crypto.subtle.digest("SHA-512", textAsBuffer);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hash = hashArray
+    .map((item) => item.toString(16).padStart(2, "0"))
+    .join("");
+  return hash;
+}
 	async function makeelement(type, id, content) {
     const fragment = 
     	document.createDocumentFragment();
@@ -47,6 +56,12 @@
 			const textblock_warning_start = "<div class=\"markdown-alert markdown-alert-warning\" dir=\"auto\"><p dir=\"auto\"><span class=\"color-fg-attention text-semibold d-inline-flex flex-items-center mb-1\"><svg class=\"octicon octicon-info mr-2\" viewBox=\"0 0 16 16\" version=\"1.1\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z\"></path></svg></span><br>";
 			const textblock_warning_end = "</p></div>";
 			
+			const _sha =
+			((window.location.href.toLowerCase().indexOf("quantumdreams") >= 0) ?
+				/*"https://raw.githubusercontent.com/QuantumDreams7/QuantumDreams7.org/main/data/text/"*/
+				false
+				:
+				true);
 			const _datafoldertext = 
 			((window.location.href.toLowerCase().indexOf("quantumdreams") >= 0) ?
 				/*"https://raw.githubusercontent.com/QuantumDreams7/QuantumDreams7.org/main/data/text/"*/
@@ -139,6 +154,21 @@
   						/warning@/g,
   						textblock_warning_end,
   					);
+  				document.getElementById(
+  					"section"+i+"_text"
+  					).innerHTML = _datafiletexts;
+  				
+  				if (_sha == true) {
+  				let SHA = await getSHA512Hash(_datafiletexts);
+  				_datafiletexts = _datafiletexts
+  				+
+  				"<div class=\"box\"><br>"
+  				+
+  				SHA
+  				+
+  				"</div>";
+  				}
+  				
   				document.getElementById(
   					"section"+i+"_text"
   					).innerHTML = _datafiletexts;
