@@ -13,6 +13,14 @@
 <link rel="stylesheet" href="/css/quantumdreams7.css">
 <script src="/script/jquery-3.7.1.min.js"></script>
 <script>
+function toggle(divid) {
+  var x = document.getElementById(divid);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 const getSHA512Hash = async (input) => {
   const textAsBuffer = new TextEncoder().encode(input);
   const hashBuffer = await window.crypto.subtle.digest("SHA-512", textAsBuffer);
@@ -43,7 +51,7 @@ const getSHA512Hash = async (input) => {
 	}
 	async function load0() {
 		try {
-			const textblock_sha_start = "<div class=\"box\"><br>SHA512:<br>";
+			const textblock_sha_start = "<div class=\"box\">SHA-512 hash:<br>";
 			const textblock_sha_end = "</div>";
 			const _sha = "@sha";
 			const sha_ = "sha@";
@@ -184,22 +192,32 @@ const getSHA512Hash = async (input) => {
   					+
   					((_shahash.length>0)
   					?
+  					"<br><button class=\"toggle\" onclick=\"toggle(\'togg"+i+"\')\">&nbsp; Signature&nbsp;</button>"
+  					+
+  					"<div style=\"display:"+((_sha512 == true)?"block":"none")+";\" class=\"togg\" id=\"togg"+i+"\">"
+  					+
   					textblock_sha_start
   					+
   					_shahash
+  					
   					+
   					"<br>Raw text:"
+   					+
+  					"<textarea readonly rows=\"4\" class=\"textareao\">"+_datafiletexts0+"</textarea>"
   					+
   					textblock_sha_end
+  					+
+  					"</div>"
   					:"")
   					+
-  					"<textarea readonly rows=\"2\" class=\"textareao\">"+_datafiletexts0+"</textarea>"
-  					+
+  					((_sha512 == true)?
   					((_shahash!==SHA512)?"<div class=\"boxlocalred\">":"<div class=\"boxlocal\">")
   					+
   					SHA512
   					+
-  					"</div>";
+  					"</div>"
+  					:
+  					"");
   					
   				} else {
 
