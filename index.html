@@ -184,7 +184,6 @@ const getSHA512Hash = async (input) => {
   						textblock_sha_end,
   					);
   					
-  				if (_sha512 == true) {
 
   					document.getElementById(
   						"section"+i+"_text"
@@ -218,26 +217,6 @@ const getSHA512Hash = async (input) => {
   					"</div>"
   					:
   					"");
-  					
-  				} else {
-
-  					document.getElementById(
-  						"section"+i+"_text"
-  					).innerHTML = _datafiletexts
-  					+
-  					((_shahash.length>0)
-  					?
-  					textblock_sha_start
-  					+
-  					_shahash
-  					+
-  					"<br>Raw text:"
-  					+
-  					textblock_sha_end
-  					:"")
-  					+
-  					"<textarea readonly rows=\"2\" class=\"textareao\">"+_datafiletexts0+"</textarea>";
-  				}
 			}
 			
 		}
