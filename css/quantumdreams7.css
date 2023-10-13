@@ -121,6 +121,13 @@ cursor: pointer;
     word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
+.textareao {
+	font-size:9px;
+	width: 100%;
+	color: #e0b899;
+    background-color: black;
+    border: 0px;
+}
 header {
 	background-position: left 0px top 0px;
 	background-size: cover;
