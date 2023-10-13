@@ -130,6 +130,7 @@ cursor: pointer;
 }
 
 .toggle {
+	font-style: italic;
 	font-size:9px;
 	color: #888888;
     background-color: black;
