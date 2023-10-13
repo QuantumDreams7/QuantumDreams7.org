@@ -94,6 +94,32 @@ cursor: pointer;
     white-space: -o-pre-wrap; /* Opera 7 */
     word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
+.boxlocal {    
+    
+    font-size:9px;
+    margin-top:9px;
+    background-color: black;
+    word-wrap:break-word;
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+.boxlocalred {    
+    
+    font-size:9px;
+    margin-top:9px;
+    color: black;
+    background-color: red;
+    word-wrap:break-word;
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
 
 header {
 	background-position: left 0px top 0px;
