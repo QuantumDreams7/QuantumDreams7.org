@@ -105,6 +105,7 @@ const getSHA512Hash = async (input) => {
   					_datafiletext = _datafiletext.substring(900);
   					}
   				let _datafiletexts = _datafiletext.split("\n");
+  				let _datafiletexts0 = _datafiletext.split("\n");
   				document.getElementById(
   					"section"+i+"menu_text_title"
   					).innerHTML = _datafiletexts[0];
@@ -127,6 +128,13 @@ const getSHA512Hash = async (input) => {
 					}
 					let _shahash = _datafiletexts[4];
   				_datafiletexts = _datafiletexts.splice(6,_datafiletext.length).join("\n");
+  				
+					
+  				_datafiletexts0 = _datafiletexts0.splice(6,_datafiletext.length).join("\n");
+  				if (_sha512 == true) {
+  					var SHA512 = await getSHA512Hash(_datafiletexts0);
+  				}
+  				
   				_datafiletexts = _datafiletexts.replace(
   						_quote,
   						textblock_quote_start
@@ -169,8 +177,7 @@ const getSHA512Hash = async (input) => {
   					);
   					
   				if (_sha512 == true) {
-  					let SHA512 = await getSHA512Hash(_datafiletexts);
-  					
+
   					document.getElementById(
   						"section"+i+"_text"
   					).innerHTML = _datafiletexts
@@ -181,8 +188,12 @@ const getSHA512Hash = async (input) => {
   					+
   					_shahash
   					+
+  					"<br>Raw text:"
+  					+
   					textblock_sha_end
   					:"")
+  					+
+  					"<textarea readonly rows=\"2\" class=\"textareao\">"+_datafiletexts0+"</textarea>"
   					+
   					((_shahash!==SHA512)?"<div class=\"boxlocalred\">":"<div class=\"boxlocal\">")
   					+
@@ -202,8 +213,12 @@ const getSHA512Hash = async (input) => {
   					+
   					_shahash
   					+
+  					"<br>Raw text:"
+  					+
   					textblock_sha_end
-  					:"");
+  					:"")
+  					+
+  					"<textarea readonly rows=\"2\" class=\"textareao\">"+_datafiletexts0+"</textarea>";
   				}
 			}
 			
