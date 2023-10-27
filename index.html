@@ -81,12 +81,15 @@ const getSHA512Hash = async (input) => {
 				:
 				"/data/text/");
 			for (var i = 0; i <= 5; i++) {
+				let R = "?R=" + Math.floor(Math.random() * 999999999);
 				let _datafileobject = await fetch (
 					_datafoldertext
 					+
 					i
 					+
 					".html"
+					+
+					R
 				);
 				let _datafiletext = await 
 					_datafileobject.text();
